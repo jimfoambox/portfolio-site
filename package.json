@@ -1,0 +1,33 @@
+{
+  "name": "james-gill-portfolio-website",
+  "version": "1.0.0",
+  "description": "Software Developer James Gill's Portfolio Website",
+  "main": "main.js",
+  "scripts": {
+    "serve": "http-server -c-1 ./public",
+    "build-watch": "webpack -w",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js",
+    "start": "npm run build-watch & npm run serve"
+  },
+  "author": "James Gill",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^0.12.3",
+    "path": "^0.12.7",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "webpack": "^5.20.1",
+    "webpack-cli": "^4.5.0"
+  }
+}
