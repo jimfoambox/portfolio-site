@@ -1,10 +1,18 @@
 import React from 'react'
-// import 'bootstrap/dist/css/bootstrap.min.css'
+import Slideshow from './Slideshow'
+import Portfolio from './Portfolio'
+import Bio from './Bio'
+import Contact from './Contact'
 
 class Home extends React.Component {
     render () {
         return (
-            <div><p>Welcome Home!</p></div>
+            <div className='homeBody'>
+                <Slideshow />
+                <Portfolio />
+                <Bio />
+                <Contact />
+            </div>
         )
     }
 }
