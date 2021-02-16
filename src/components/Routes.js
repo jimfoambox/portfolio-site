@@ -36,8 +36,18 @@ const Routes = () => {
                         <Route path="/contact" exact component={Contact} />
                     </Switch>
                 </main>
-                <footer>
-                    <div>© Copyright 2021 James Gill. All Rights Reserved.</div>
+                <footer style={{ backgroundColor: '#000' }}>
+                    <div style={{ textAlign: 'center', color:"#FFF" }}>© Copyright 2021 James Gill.  Built with 
+                        <a href={"https://reactjs.org/"}>
+                        <img style={{width: 40, marginRight: 10}} src='/assets/reactLogo500px.png' />
+                        </a>
+                        <a href={"https://react-bootstrap.github.io/"}>
+                        <img style={{width: 40, marginRight: 10}} src='/assets/bootstrap500px.png' />
+                        </a>
+                        <a href={"https://www.react-spring.io/"}>
+                        <img style={{width: 40, marginRight: 10}} src='/assets/reactSpring500px.png' />
+                        </a>
+                    </div>
                 </footer>
             </div>
         </Router>

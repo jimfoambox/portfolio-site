@@ -1,24 +1,39 @@
-import React from 'react'
-import Slider from 'react-animated-slider';
-import 'react-animated-slider/build/horizontal.css';
+import React, { useState, useEffect } from 'react'
+import { useTransition, animated, config } from 'react-spring'
+import { Container, Row } from 'react-bootstrap'
 
-export default class Slideshow extends React.Component {
 
-    render () {
-        const slides = [
-        { title: "Marigo Bay", description: "A Jewel of the Caribbean", image: "https://imgur.com/0c9iaJh.jpg"},
-        { title: "Maldives", description: "Indian Ocean Paradise", image: "https://imgur.com/3bZoRJK.jpg"},
-        { title: "Maldives", description: "Indian Ocean Paradise", image: "https://imgur.com/3bZoRJK.jpg"}
-        ];
+const slides = [
+    { id: 0, url: 'photo-1544511916-0148ccdeb877?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1901&q=80i' },
+    { id: 1, url: 'photo-1544572571-ab94fd872ce4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1534&q=80' },
+    { id: 2, url: 'reserve/bnW1TuTV2YGcoh1HyWNQ_IMG_0207.JPG?ixlib=rb-1.2.1&w=1534&q=80' },
+    { id: 3, url: 'photo-1540206395-68808572332f?ixlib=rb-1.2.1&w=1181&q=80' },
+]
 
-        return (
-        <Slider autoplay={2000}>
-        {slides.map((slide, index) => <div key={index} style={{ background: `url('${slide.image}') no-repeat center center` }}>
-            <h2>{slide.title}</h2>
-            <div>{slide.description}</div>
-        </div>)}
-        </Slider>
-        )}
+const Slideshow = () => {
+    const [index, set] = useState(0)
+    const transitions = useTransition(slides[index], item => item.id, {
+        from: { opacity: 0 },
+        enter: { opacity: 1 },
+        leave: { opacity: 0 },
+        config: config.molasses,
+    })
+    useEffect(() => void setInterval(() => set(state => (state + 1) % 4), 2000), [])
+    return (
+        <div className='sliderDiv'>
+            <Container>
+                <Row>
+                    {transitions.map(({ item, props, key }) => (
+                        <animated.div
+                            key={key}
+                            className='sliderbg'
+                            style={{ ...props, backgroundImage: `url(https://images.unsplash.com/${item.url}&auto=format&fit=crop)` }}
+                        />
+                    ))}
+                </Row>
+            </Container>
+        </div>
+    )        
 };
 
-
+export default Slideshow

@@ -1,59 +1,114 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import { Card, Button, Container, Row } from 'react-bootstrap'
-import { useSpring, useChain, animated } from 'react-spring'
+import { animated } from 'react-spring'
+import { config, Spring } from 'react-spring/renderprops'
+import { InView } from 'react-intersection-observer'
 
 
-const Portfolio = () => {
-    const springRefOne = useRef();
-    const springRefTwo = useRef();
-    const springRefThree = useRef();
-    const fadeInBounceOne = useSpring({ transform: 'translate3d(0,0px,0)', opacity:1, from: { transform: 'translate3d(0,-40px,0)', opacity: 0 }, config: {duration: 1300}, ref: springRefOne})
-    const fadeInBounceTwo = useSpring({ transform: 'translate3d(0,0px,0)', opacity:1, from: { transform: 'translate3d(0,-40px,0)', opacity: 0}, config: {duration: 1300}, ref: springRefTwo})
-    const fadeInBounceThree = useSpring({ transform: 'translate3d(0,0px,0)', opacity:1, from: { transform: 'translate3d(0,-40px,0)', opacity: 0}, config: {duration: 1300}, ref: springRefThree})
-    useChain([springRefOne, springRefTwo, springRefThree], [0.1, 0.3, 0.5])
-    const AnimatedCard = animated(Card)
 
-    return (
-        <div>
-            <h1>Portfolio</h1>
-            <Container>
-                <Row>
-                    <AnimatedCard style={ { width: '18rem', margin: '20px', ...fadeInBounceOne }}>
-                        <Card.Img variant="top" src="holder.js/100px180" />
-                        <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
-                            <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk of
-                                the card's content.
-                            </Card.Text>
-                            <Button variant="primary">Go somewhere</Button>
-                        </Card.Body>
-                    </AnimatedCard>
-                    <AnimatedCard style={{ width: '18rem', margin: '20px', ...fadeInBounceTwo  }}>
-                        <Card.Img variant="top" src="holder.js/100px180" />
-                        <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
-                            <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk of
-                                the card's content.
-                            </Card.Text>
-                            <Button variant="primary">Go somewhere</Button>
-                        </Card.Body>
-                    </AnimatedCard>
-                    <AnimatedCard style={{ width: '18rem', margin: '20px', ...fadeInBounceThree  }}>
-                        <Card.Img variant="top" src="holder.js/100px180" />
-                        <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
-                            <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk of
-                                the card's content.
-                            </Card.Text>
-                            <Button variant="primary">Go somewhere</Button>
-                        </Card.Body>
-                    </AnimatedCard>
-                </Row>
-            </Container>
-        </div>
-    )
+
+ class Portfolio extends React.Component {
+    constructor () {
+        super()
+        this.state = {
+            isVisible: false
+        }
+        this.handleView = this.handleView.bind(this)
+    }
+    
+    handleView (inView) {
+        inView && this.setState({
+            isVisible: true
+        })
+    }
+    
+    render () {
+        const AnimatedCard = animated(Card)
+        const isVisible = this.state.isVisible
+        return (
+            <div style={{ padding: 30 }}>
+                <div>
+                    <h1 style={{ textAlign:'center', paddingBottom: 10 }}>Portfolio</h1>      
+                </div>
+                <InView tag='div' onChange={this.handleView} threshold={.3} triggerOnce={true}>
+                    <Container>
+                        <Row>
+                            <Spring to={{ transform: isVisible ? 'translate3d(0,0px,0)': 'translate3d(0,-40px,0)', opacity: isVisible ? 1 : 0 }} delay={150} config={config.gentle}>
+                                {props => (
+                                    <AnimatedCard style={ { width: '18rem', margin: '20px', ...props }}>
+                                        <Row style={{ justifyContent: 'center' }}>
+                                            <Card.Img variant="top" src="/assets/parallelscreenlogo600.png" style={{ width: 286 }}/>
+                                        </Row>
+                                        <Card.Body>
+                                            <Card.Title>Parallel</Card.Title>
+                                            <Card.Text>
+                                                A crowdsourced landmark hotspot IOS mobile app built with React Native and using Mapbox GL.
+                                            </Card.Text>
+                                            <a href={"https://github.com/jimfoambox"}>
+                                                <Button variant="primary">See Demo</Button>
+                                            </a>
+                                        </Card.Body>
+                                    </AnimatedCard>
+                                )}
+                            </Spring>
+                            <Spring to={{ transform: isVisible ? 'translate3d(0,0px,0)': 'translate3d(0,-40px,0)', opacity: isVisible ? 1 : 0 }} delay={300} config={config.gentle}>
+                                {props => (
+                                    <AnimatedCard style={{ width: '18rem', margin: '20px', ...props  }}>
+                                        <Row style={{ justifyContent: 'center' }}>
+                                            <Card.Img variant="top" src="/assets/inspirescreenlogo600.png" style={{ width: 286 }} />
+                                        </Row>
+                                        <Card.Body>
+                                            <Card.Title>Inspire!</Card.Title>
+                                            <Card.Text>
+                                                An IOS mobile app built in Swift that gives you a famous inspiration quote based on your mood
+                                                and the day of the week.
+                                            </Card.Text>
+                                            <a href={"https://github.com/jimfoambox"}>
+                                                <Button variant="primary">See Demo</Button>
+                                            </a>
+                                        </Card.Body>
+                                    </AnimatedCard>
+                                )}
+                            </Spring>
+                            <Spring to={{ transform: isVisible ? 'translate3d(0,0px,0)': 'translate3d(0,-40px,0)', opacity: isVisible ? 1 : 0 }} delay={450} config={config.gentle}>
+                                {props => (
+                                    <AnimatedCard style={{ width: '18rem', margin: '20px', ...props  }}>
+                                        <Row style={{ justifyContent: 'center' }}>
+                                            <Card.Img variant="top" src="/assets/fallenplanetlogo600.png" style={{ width: 286 }} />
+                                        </Row>
+                                        <Card.Body>
+                                            <Card.Title>Fallen Planet</Card.Title>
+                                            <Card.Text>
+                                                A 2D platform sci-fi game built in Javascript with the mighty Phaser 3 library.
+                                            </Card.Text>
+                                            <a href={"https://github.com/jimfoambox"}>
+                                                <Button variant="primary">Play The Game</Button>
+                                            </a>
+                                        </Card.Body>
+                                    </AnimatedCard>
+                                )}
+                            </Spring>
+                            <Spring to={{ transform: isVisible ? 'translate3d(0,0px,0)': 'translate3d(0,-40px,0)', opacity: isVisible ? 1 : 0 }} delay={600} config={config.gentle}>
+                                {props => (
+                                    <AnimatedCard style={{ width: '18rem', margin: '20px', ...props  }}>
+                                        <Card.Img variant="top" src="holder.js/100px180" />
+                                        <Card.Body>
+                                            <Card.Title>Whistler</Card.Title>
+                                            <Card.Text>
+                                                An FM digital synthesizer built in Javascript using the Tone.js library.
+                                            </Card.Text>
+                                            <a href={"https://github.com/jimfoambox"}>
+                                                <Button variant="primary">Go somewhere</Button>
+                                            </a>
+                                        </Card.Body>
+                                    </AnimatedCard>
+                                )}
+                            </Spring>
+                        </Row>
+                    </Container>
+                </InView>
+            </div>
+        )
+    }
 }
 export default Portfolio
