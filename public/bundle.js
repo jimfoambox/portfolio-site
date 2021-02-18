@@ -3949,10 +3949,6 @@ var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Slideshow = __webpack_require__(/*! ./Slideshow */ "./src/components/Slideshow.js");
-
-var _Slideshow2 = _interopRequireDefault(_Slideshow);
-
 var _Portfolio = __webpack_require__(/*! ./Portfolio */ "./src/components/Portfolio.js");
 
 var _Portfolio2 = _interopRequireDefault(_Portfolio);
@@ -3988,7 +3984,6 @@ var Home = function (_React$Component) {
             return _react2.default.createElement(
                 'div',
                 { className: 'homeBody' },
-                _react2.default.createElement(_Slideshow2.default, null),
                 _react2.default.createElement(_Portfolio2.default, null),
                 _react2.default.createElement(_Bio2.default, null),
                 _react2.default.createElement(_Contact2.default, null)
@@ -4255,17 +4250,9 @@ var _Home = __webpack_require__(/*! ./Home */ "./src/components/Home.js");
 
 var _Home2 = _interopRequireDefault(_Home);
 
-var _Portfolio = __webpack_require__(/*! ./Portfolio */ "./src/components/Portfolio.js");
+var _Slideshow = __webpack_require__(/*! ./Slideshow */ "./src/components/Slideshow.js");
 
-var _Portfolio2 = _interopRequireDefault(_Portfolio);
-
-var _Bio = __webpack_require__(/*! ./Bio */ "./src/components/Bio.js");
-
-var _Bio2 = _interopRequireDefault(_Bio);
-
-var _Contact = __webpack_require__(/*! ./Contact */ "./src/components/Contact.js");
-
-var _Contact2 = _interopRequireDefault(_Contact);
+var _Slideshow2 = _interopRequireDefault(_Slideshow);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -4276,59 +4263,56 @@ var Routes = function Routes() {
         _react2.default.createElement(
             'div',
             null,
+            _react2.default.createElement(_Slideshow2.default, null),
             _react2.default.createElement(
-                'nav',
-                null,
+                _reactBootstrap.Navbar,
+                { bg: 'dark', expand: 'lg', sticky: 'top' },
                 _react2.default.createElement(
-                    _reactBootstrap.Navbar,
-                    { bg: 'dark', expand: 'lg' },
+                    _reactBootstrap.Nav,
+                    null,
                     _react2.default.createElement(
-                        _reactBootstrap.Nav,
+                        'div',
                         null,
+                        _react2.default.createElement('img', { src: '/assets/jamesgilllogo.png', style: { height: 40 } })
+                    )
+                ),
+                _react2.default.createElement(
+                    _reactBootstrap.Nav,
+                    { className: 'ml-auto' },
+                    _react2.default.createElement(
+                        _reactBootstrap.NavItem,
+                        { eventkey: 1, href: '/' },
                         _react2.default.createElement(
-                            'div',
-                            null,
-                            _react2.default.createElement('img', { src: '/assets/jamesgilllogo.png', style: { height: 40 } })
+                            _reactBootstrap.Nav.Link,
+                            { as: _reactRouterHashLink.HashLink, className: 'navLink', to: '/' },
+                            'Home'
                         )
                     ),
                     _react2.default.createElement(
-                        _reactBootstrap.Nav,
-                        { className: 'ml-auto' },
+                        _reactBootstrap.NavItem,
+                        { eventkey: 2, href: '/' },
                         _react2.default.createElement(
-                            _reactBootstrap.NavItem,
-                            { eventkey: 1, href: '/' },
-                            _react2.default.createElement(
-                                _reactBootstrap.Nav.Link,
-                                { as: _reactRouterHashLink.HashLink, className: 'navLink', to: '/' },
-                                'Home'
-                            )
-                        ),
+                            _reactBootstrap.Nav.Link,
+                            { as: _reactRouterHashLink.HashLink, className: 'navLink', to: '/#portfolio' },
+                            'Portfolio'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        _reactBootstrap.NavItem,
+                        { eventkey: 3, href: '/' },
                         _react2.default.createElement(
-                            _reactBootstrap.NavItem,
-                            { eventkey: 2, href: '/' },
-                            _react2.default.createElement(
-                                _reactBootstrap.Nav.Link,
-                                { as: _reactRouterHashLink.HashLink, className: 'navLink', to: '/#portfolio' },
-                                'Portfolio'
-                            )
-                        ),
+                            _reactBootstrap.Nav.Link,
+                            { as: _reactRouterHashLink.HashLink, className: 'navLink', to: '/#aboutme' },
+                            'About Me'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        _reactBootstrap.NavItem,
+                        { eventkey: 4, href: '/' },
                         _react2.default.createElement(
-                            _reactBootstrap.NavItem,
-                            { eventkey: 3, href: '/' },
-                            _react2.default.createElement(
-                                _reactBootstrap.Nav.Link,
-                                { as: _reactRouterHashLink.HashLink, className: 'navLink', to: '/#aboutme' },
-                                'About Me'
-                            )
-                        ),
-                        _react2.default.createElement(
-                            _reactBootstrap.NavItem,
-                            { eventkey: 4, href: '/' },
-                            _react2.default.createElement(
-                                _reactBootstrap.Nav.Link,
-                                { as: _reactRouterHashLink.HashLink, className: 'navLink', to: '/#contact' },
-                                'Contact'
-                            )
+                            _reactBootstrap.Nav.Link,
+                            { as: _reactRouterHashLink.HashLink, className: 'navLink', to: '/#contact' },
+                            'Contact'
                         )
                     )
                 )
@@ -4431,40 +4415,6 @@ var Slideshow = function (_React$Component) {
 
     return Slideshow;
 }(_react2.default.Component);
-
-// const slides = [
-//     { id: 0, url: 'photo-1544511916-0148ccdeb877?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1901&q=80i' },
-//     { id: 1, url: 'photo-1544572571-ab94fd872ce4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1534&q=80' },
-//     { id: 2, url: 'reserve/bnW1TuTV2YGcoh1HyWNQ_IMG_0207.JPG?ixlib=rb-1.2.1&w=1534&q=80' },
-//     { id: 3, url: 'photo-1540206395-68808572332f?ixlib=rb-1.2.1&w=1181&q=80' },
-// ]
-
-
-// const Slideshow = () => {
-//     const [index, set] = useState(0)
-//     const transitions = useTransition(slides[index], item => item.id, {
-//         from: { opacity: 0 },
-//         enter: { opacity: 1 },
-//         leave: { opacity: 0 },
-//         config: config.molasses,
-//     })
-//     useEffect(() => void setInterval(() => set(state => (state + 1) % 4), 2000), [])
-//     return (
-//         <div className='sliderDiv'>
-//             <Container>
-//                 <Row>
-//                     {transitions.map(({ item, props, key }) => (
-//                         <animated.div
-//                             key={key}
-//                             className='sliderbg'
-//                             style={{ ...props, backgroundImage: `url(https://images.unsplash.com/${item.url}&auto=format&fit=crop)` }}
-//                         />
-//                     ))}
-//                 </Row>
-//             </Container>
-//         </div>
-//     )        
-// };
 
 exports.default = Slideshow;
 

@@ -3,16 +3,14 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { HashLink as Link} from 'react-router-hash-link'
 import { Nav, Navbar, NavItem } from 'react-bootstrap'
 import Home from './Home'
-import Portfolio from './Portfolio'
-import Bio from './Bio'
-import Contact from './Contact'
+import Slideshow from './Slideshow';
 
 const Routes = () => {
     return (
         <Router>
             <div>
-                <nav>
-                    <Navbar bg='dark' expand='lg'>
+                <Slideshow />
+                    <Navbar bg='dark' expand='lg' sticky="top">
                         <Nav>
                             <div><img src='/assets/jamesgilllogo.png' style={{ height: 40 }} /></div>
                         </Nav>
@@ -31,13 +29,9 @@ const Routes = () => {
                             </NavItem>
                         </Nav>
                     </Navbar>
-                </nav>
                 <main>
                     <Switch>
                         <Route path="/" component={Home} />
-                        {/* <Route path="/portfolio" exact component={Portfolio} />
-                        <Route path="/bio" exact component={Bio} />
-                        <Route path="/contact" exact component={Contact} /> */}
                     </Switch>
                 </main>
                 <footer style={{ backgroundColor: '#343a40' }}>
