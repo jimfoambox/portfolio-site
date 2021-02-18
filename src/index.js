@@ -5,6 +5,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../public/styles.css'
 
 render(
-    <Routes />,
+  <Routes />,
   document.getElementById('main')
 )
