@@ -82697,14 +82697,7 @@ __webpack_require__(/*! ../public/styles.css */ "./public/styles.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// import {Provider} from 'react-redux'
-// import store from './store'
-
-(0, _reactDom.render)(
-//   <Provider store={store}>
-_react2.default.createElement(_Routes2.default, null),
-//   </Provider>,
-document.getElementById('main'));
+(0, _reactDom.render)(_react2.default.createElement(_Routes2.default, null), document.getElementById('main'));
 })();
 
 /******/ })()
