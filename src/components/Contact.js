@@ -70,7 +70,7 @@ export default class Contact extends React.Component {
         const { name, email, message, sent } = this.state;
         if (sent) { 
             return (
-            <div>
+            <div style={{ padding: 80 }}>
                 <Spring from={{ transform: 'translate3d(0,-40px,0)', opacity: 0 }} to={{ transform: 'translate3d(0,0px,0)', opacity: 1 }} delay={100} config={config.gentle}>
                     {props => (
                         <h3 style={{ textAlign: 'center', margin: 150, ...props }}>Message Sent</h3>
@@ -79,7 +79,7 @@ export default class Contact extends React.Component {
             </div> ) 
         } 
         return (
-            <div id="contact" style={{ padding: 30 }}>
+            <div id="contact" style={{ padding: 80 }}>
                 <div>
                     <h1 style={{ textAlign:'center', paddingBottom: 10, paddingTop: 40 }}>Contact</h1>
                     <p style={{ textAlign:'center'}} >Reach out to me any time: I'd love to hear from you!</p>      

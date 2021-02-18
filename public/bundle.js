@@ -3427,7 +3427,7 @@ var Bio = function (_React$Component) {
 
             return _react2.default.createElement(
                 'div',
-                { id: 'aboutme', style: { padding: 30 } },
+                { id: 'aboutme', style: { padding: 80 } },
                 _react2.default.createElement(
                     'div',
                     null,
@@ -3842,7 +3842,7 @@ var Contact = function (_React$Component) {
             if (sent) {
                 return _react2.default.createElement(
                     'div',
-                    null,
+                    { style: { padding: 80 } },
                     _react2.default.createElement(
                         _renderprops.Spring,
                         { from: { transform: 'translate3d(0,-40px,0)', opacity: 0 }, to: { transform: 'translate3d(0,0px,0)', opacity: 1 }, delay: 100, config: _renderprops.config.gentle },
@@ -3858,7 +3858,7 @@ var Contact = function (_React$Component) {
             }
             return _react2.default.createElement(
                 'div',
-                { id: 'contact', style: { padding: 30 } },
+                { id: 'contact', style: { padding: 80 } },
                 _react2.default.createElement(
                     'div',
                     null,
@@ -3998,6 +3998,64 @@ exports.default = Home;
 
 /***/ }),
 
+/***/ "./src/components/IntroTitle.js":
+/*!**************************************!*\
+  !*** ./src/components/IntroTitle.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+    value: true
+}));
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _renderprops = __webpack_require__(/*! react-spring/renderprops */ "./node_modules/react-spring/renderprops.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var IntroTitle = function IntroTitle() {
+
+    var style = {
+        color: '#87107f',
+        fontWeight: '500',
+        fontFamily: "BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji",
+        lineHeight: '1.2',
+        fontSize: '2.5rem'
+    };
+
+    return _react2.default.createElement(
+        'div',
+        { className: 'introText' },
+        _react2.default.createElement(
+            'h1',
+            null,
+            'Hi! I\'m ',
+            _react2.default.createElement(
+                'span',
+                { style: style },
+                'James Gill.'
+            )
+        ),
+        _react2.default.createElement(
+            'h3',
+            null,
+            'A software developer on',
+            _react2.default.createElement('br', null),
+            ' a mission to create and explore.'
+        )
+    );
+};
+
+exports.default = IntroTitle;
+
+/***/ }),
+
 /***/ "./src/components/Portfolio.js":
 /*!*************************************!*\
   !*** ./src/components/Portfolio.js ***!
@@ -4064,7 +4122,7 @@ var Portfolio = function (_React$Component) {
             var isVisible = this.state.isVisible;
             return _react2.default.createElement(
                 'div',
-                { id: 'portfolio', style: { padding: 30 } },
+                { id: 'portfolio', style: { padding: 80 } },
                 _react2.default.createElement(
                     'div',
                     null,
@@ -4377,13 +4435,13 @@ var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactSpring = __webpack_require__(/*! react-spring */ "./node_modules/react-spring/web.js");
-
-var _reactBootstrap = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/index.js");
-
 var _reactParticlesJs = __webpack_require__(/*! react-particles-js */ "./node_modules/react-particles-js/index.js");
 
 var _reactParticlesJs2 = _interopRequireDefault(_reactParticlesJs);
+
+var _IntroTitle = __webpack_require__(/*! ./IntroTitle */ "./src/components/IntroTitle.js");
+
+var _IntroTitle2 = _interopRequireDefault(_IntroTitle);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -4408,7 +4466,37 @@ var Slideshow = function (_React$Component) {
             return _react2.default.createElement(
                 'div',
                 { className: 'sliderDiv' },
-                _react2.default.createElement(_reactParticlesJs2.default, { className: 'sliderbg', style: { backgroundImage: 'url(https://i.ibb.co/0XzbQNQ/gray-Particles-Bg.jpg/&auto=format&fit=crop)' } })
+                _react2.default.createElement(
+                    'div',
+                    null,
+                    _react2.default.createElement(_reactParticlesJs2.default, {
+                        params: {
+                            "particles": {
+                                "number": {
+                                    "value": 50
+                                },
+                                "size": {
+                                    "value": 3
+                                }
+                            },
+                            "interactivity": {
+                                "events": {
+                                    "onhover": {
+                                        "enable": true,
+                                        "mode": "repulse"
+                                    }
+                                }
+                            }
+                        },
+                        className: 'sliderbg',
+                        style: { backgroundImage: 'url(https://i.ibb.co/FxmvvnJ/gray-Particles-Bg2.jpg/&auto=format&fit=crop)' }
+                    })
+                ),
+                _react2.default.createElement(
+                    'div',
+                    null,
+                    _react2.default.createElement(_IntroTitle2.default, null)
+                )
             );
         }
     }]);
@@ -15210,7 +15298,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".homeBody {\n    display: flex;\n    flex-direction: column;\n}\n\n.homeComponents {\n    padding: 50px;\n}\n\n.sliderbg {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh; \n    background-size: cover;\n    background-position: center;\n    will-change: opacity;\n  }\n\n.sliderDiv {\n    position: relative;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh; \n    background-size: cover;\n    background-position: center;\n}\n\n.navLink {\n    color: #fff !important;\n}\n\n.navLink:hover {\n    color: darkgrey !important;\n}", "",{"version":3,"sources":["webpack://./public/styles.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,sBAAsB;AAC1B;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,kBAAkB;IAClB,MAAM;IACN,OAAO;IACP,YAAY;IACZ,aAAa;IACb,sBAAsB;IACtB,2BAA2B;IAC3B,oBAAoB;EACtB;;AAEF;IACI,kBAAkB;IAClB,MAAM;IACN,OAAO;IACP,YAAY;IACZ,aAAa;IACb,sBAAsB;IACtB,2BAA2B;AAC/B;;AAEA;IACI,sBAAsB;AAC1B;;AAEA;IACI,0BAA0B;AAC9B","sourcesContent":[".homeBody {\n    display: flex;\n    flex-direction: column;\n}\n\n.homeComponents {\n    padding: 50px;\n}\n\n.sliderbg {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh; \n    background-size: cover;\n    background-position: center;\n    will-change: opacity;\n  }\n\n.sliderDiv {\n    position: relative;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh; \n    background-size: cover;\n    background-position: center;\n}\n\n.navLink {\n    color: #fff !important;\n}\n\n.navLink:hover {\n    color: darkgrey !important;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".homeBody {\n    display: flex;\n    flex-direction: column;\n}\n\n.homeComponents {\n    padding: 50px;\n}\n\n.sliderbg {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh; \n    background-size: cover;\n    background-position: center;\n    will-change: opacity;\n  }\n\n.sliderDiv {\n    display: flex;\n    justify-content: center;\n    align-content: center;\n    position: relative;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh; \n    background-size: cover;\n    background-position: center;\n}\n\n.navLink {\n    color: #fff !important;\n}\n\n.navLink:hover {\n    color: darkgrey !important;\n}\n\n.introText {\n    position: absolute;\n    top: 40%;\n    left: 0;\n    width: 100vw;\n    height: 100vh; \n    text-align: center;\n    color: #fff;\n    font-weight: 500;\n    font-family: -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,\"Noto Sans\",\"Liberation Sans\",sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\";;\n    align-self: center;\n    line-height: 1.2;\n}", "",{"version":3,"sources":["webpack://./public/styles.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,sBAAsB;AAC1B;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,kBAAkB;IAClB,MAAM;IACN,OAAO;IACP,YAAY;IACZ,aAAa;IACb,sBAAsB;IACtB,2BAA2B;IAC3B,oBAAoB;EACtB;;AAEF;IACI,aAAa;IACb,uBAAuB;IACvB,qBAAqB;IACrB,kBAAkB;IAClB,MAAM;IACN,OAAO;IACP,YAAY;IACZ,aAAa;IACb,sBAAsB;IACtB,2BAA2B;AAC/B;;AAEA;IACI,sBAAsB;AAC1B;;AAEA;IACI,0BAA0B;AAC9B;;AAEA;IACI,kBAAkB;IAClB,QAAQ;IACR,OAAO;IACP,YAAY;IACZ,aAAa;IACb,kBAAkB;IAClB,WAAW;IACX,gBAAgB;IAChB,yMAAyM;IACzM,kBAAkB;IAClB,gBAAgB;AACpB","sourcesContent":[".homeBody {\n    display: flex;\n    flex-direction: column;\n}\n\n.homeComponents {\n    padding: 50px;\n}\n\n.sliderbg {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh; \n    background-size: cover;\n    background-position: center;\n    will-change: opacity;\n  }\n\n.sliderDiv {\n    display: flex;\n    justify-content: center;\n    align-content: center;\n    position: relative;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh; \n    background-size: cover;\n    background-position: center;\n}\n\n.navLink {\n    color: #fff !important;\n}\n\n.navLink:hover {\n    color: darkgrey !important;\n}\n\n.introText {\n    position: absolute;\n    top: 40%;\n    left: 0;\n    width: 100vw;\n    height: 100vh; \n    text-align: center;\n    color: #fff;\n    font-weight: 500;\n    font-family: -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,\"Noto Sans\",\"Liberation Sans\",sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\";;\n    align-self: center;\n    line-height: 1.2;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

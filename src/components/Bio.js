@@ -32,7 +32,7 @@ export default class Bio extends React.Component {
         const AnimatedRow = animated(Row)
         const { isVisible, isVisibleTwo } = this.state
         return (
-            <div id="aboutme" style={{ padding: 30 }}>
+            <div id="aboutme" style={{ padding: 80 }}>
                 <div>
                     <h1 style={{ textAlign:'center', paddingBottom: 10 }}>About Me</h1>      
                 </div>

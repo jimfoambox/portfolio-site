@@ -1,14 +1,39 @@
-import React, { useState, useEffect } from 'react'
-import { useTransition, animated, config } from 'react-spring'
-import { Container, Row } from 'react-bootstrap'
+import React from 'react'
 import Particles from 'react-particles-js'
+import IntroTitle from './IntroTitle'
 
 class Slideshow extends React.Component {
 
     render () {
         return (
             <div className='sliderDiv'>
-                <Particles className="sliderbg" style={{backgroundImage: 'url(https://i.ibb.co/0XzbQNQ/gray-Particles-Bg.jpg/&auto=format&fit=crop)'}}/>
+            <div>
+                <Particles 
+                    params={{
+                        "particles": {
+                            "number": {
+                                "value": 50
+                            },
+                            "size": {
+                                "value": 3
+                            }
+                        },
+                        "interactivity": {
+                            "events": {
+                                "onhover": {
+                                    "enable": true,
+                                    "mode": "repulse"
+                                }
+                            }
+                        }
+	                }} 
+                    className="sliderbg" 
+                    style={{backgroundImage: 'url(https://i.ibb.co/FxmvvnJ/gray-Particles-Bg2.jpg/&auto=format&fit=crop)'}}
+                />
+            </div>
+            <div>
+                <IntroTitle />
+            </div>
             </div>
         )
     }

@@ -26,7 +26,7 @@ import { InView } from 'react-intersection-observer'
         const AnimatedCard = animated(Card)
         const isVisible = this.state.isVisible
         return (
-            <div id="portfolio" style={{ padding: 30 }}>
+            <div id="portfolio" style={{ padding: 80 }}>
                 <div>
                     <h1 style={{ textAlign:'center', paddingBottom: 10 }}>Portfolio</h1>      
                 </div>
