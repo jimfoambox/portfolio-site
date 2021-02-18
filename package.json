@@ -1,6 +1,9 @@
 {
   "name": "james-gill-portfolio-website",
   "version": "1.0.0",
+  "engines": {
+    "node": "12.18.4"
+  },
   "description": "Software Developer James Gill's Portfolio Website",
   "main": "main.js",
   "scripts": {
