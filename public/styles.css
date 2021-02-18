@@ -27,3 +27,11 @@
     background-size: cover;
     background-position: center;
 }
+
+.navLink {
+    color: #fff !important;
+}
+
+.navLink:hover {
+    color: darkgrey !important;
+}

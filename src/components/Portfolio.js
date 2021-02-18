@@ -26,25 +26,27 @@ import { InView } from 'react-intersection-observer'
         const AnimatedCard = animated(Card)
         const isVisible = this.state.isVisible
         return (
-            <div style={{ padding: 30 }}>
+            <div id="portfolio" style={{ padding: 30 }}>
                 <div>
                     <h1 style={{ textAlign:'center', paddingBottom: 10 }}>Portfolio</h1>      
                 </div>
-                <InView tag='div' onChange={this.handleView} threshold={.3} triggerOnce={true}>
+                <InView tag='div' onChange={this.handleView} threshold={.4} triggerOnce={true}>
                     <Container>
-                        <Row>
+                        <Row style={{ justifyContent: 'center' }}>
                             <Spring to={{ transform: isVisible ? 'translate3d(0,0px,0)': 'translate3d(0,-40px,0)', opacity: isVisible ? 1 : 0 }} delay={150} config={config.gentle}>
                                 {props => (
                                     <AnimatedCard style={ { width: '18rem', margin: '20px', ...props }}>
                                         <Row style={{ justifyContent: 'center' }}>
-                                            <Card.Img variant="top" src="/assets/parallelscreenlogo600.png" style={{ width: 286 }}/>
+                                            <a href={"https://youtu.be/Jgi-ngC3Yl0"} target={'_blank'}>
+                                                <Card.Img variant="top" src="/assets/parallelscreenlogo600.png" style={{ width: 286 }}/>
+                                            </a>
                                         </Row>
                                         <Card.Body>
                                             <Card.Title>Parallel</Card.Title>
                                             <Card.Text>
                                                 A crowdsourced landmark hotspot IOS mobile app built with React Native and using Mapbox GL.
                                             </Card.Text>
-                                            <a href={"https://github.com/jimfoambox"}>
+                                            <a href={"https://youtu.be/Jgi-ngC3Yl0"} target={'_blank'}>
                                                 <Button variant="primary">See Demo</Button>
                                             </a>
                                         </Card.Body>
@@ -55,7 +57,9 @@ import { InView } from 'react-intersection-observer'
                                 {props => (
                                     <AnimatedCard style={{ width: '18rem', margin: '20px', ...props  }}>
                                         <Row style={{ justifyContent: 'center' }}>
-                                            <Card.Img variant="top" src="/assets/inspirescreenlogo600.png" style={{ width: 286 }} />
+                                            <a href={"https://www.youtube.com/watch?v=56KK8hrHAII&feature=youtu.be"} target={'_blank'}>
+                                                <Card.Img variant="top" src="/assets/inspirescreenlogo600.png" style={{ width: 286 }} />
+                                            </a>
                                         </Row>
                                         <Card.Body>
                                             <Card.Title>Inspire!</Card.Title>
@@ -63,7 +67,7 @@ import { InView } from 'react-intersection-observer'
                                                 An IOS mobile app built in Swift that gives you a famous inspiration quote based on your mood
                                                 and the day of the week.
                                             </Card.Text>
-                                            <a href={"https://github.com/jimfoambox"}>
+                                            <a href={"https://www.youtube.com/watch?v=56KK8hrHAII&feature=youtu.be"} target={'_blank'}>
                                                 <Button variant="primary">See Demo</Button>
                                             </a>
                                         </Card.Body>
@@ -74,21 +78,23 @@ import { InView } from 'react-intersection-observer'
                                 {props => (
                                     <AnimatedCard style={{ width: '18rem', margin: '20px', ...props  }}>
                                         <Row style={{ justifyContent: 'center' }}>
-                                            <Card.Img variant="top" src="/assets/fallenplanetlogo600.png" style={{ width: 286 }} />
+                                            <a href={"https://fallen-planet.herokuapp.com/"} target={'_blank'}>
+                                                <Card.Img variant="top" src="/assets/fallenplanetlogo600.png" style={{ width: 286 }} />
+                                            </a>
                                         </Row>
                                         <Card.Body>
                                             <Card.Title>Fallen Planet</Card.Title>
                                             <Card.Text>
                                                 A 2D platform sci-fi game built in Javascript with the mighty Phaser 3 library.
                                             </Card.Text>
-                                            <a href={"https://github.com/jimfoambox"}>
+                                            <a href={"https://fallen-planet.herokuapp.com/"} target={'_blank'}>
                                                 <Button variant="primary">Play The Game</Button>
                                             </a>
                                         </Card.Body>
                                     </AnimatedCard>
                                 )}
                             </Spring>
-                            <Spring to={{ transform: isVisible ? 'translate3d(0,0px,0)': 'translate3d(0,-40px,0)', opacity: isVisible ? 1 : 0 }} delay={600} config={config.gentle}>
+                            {/* <Spring to={{ transform: isVisible ? 'translate3d(0,0px,0)': 'translate3d(0,-40px,0)', opacity: isVisible ? 1 : 0 }} delay={600} config={config.gentle}>
                                 {props => (
                                     <AnimatedCard style={{ width: '18rem', margin: '20px', ...props  }}>
                                         <Card.Img variant="top" src="holder.js/100px180" />
@@ -103,7 +109,7 @@ import { InView } from 'react-intersection-observer'
                                         </Card.Body>
                                     </AnimatedCard>
                                 )}
-                            </Spring>
+                            </Spring> */}
                         </Row>
                     </Container>
                 </InView>

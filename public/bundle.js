@@ -3395,9 +3395,11 @@ var Bio = function (_React$Component) {
         var _this = _possibleConstructorReturn(this, (Bio.__proto__ || Object.getPrototypeOf(Bio)).call(this));
 
         _this.state = {
-            isVisible: false
+            isVisible: false,
+            isVisibleTwo: false
         };
         _this.handleView = _this.handleView.bind(_this);
+        _this.secondHandleView = _this.secondHandleView.bind(_this);
         return _this;
     }
 
@@ -3409,13 +3411,23 @@ var Bio = function (_React$Component) {
             });
         }
     }, {
+        key: 'secondHandleView',
+        value: function secondHandleView(inView) {
+            inView && this.setState({
+                isVisibleTwo: true
+            });
+        }
+    }, {
         key: 'render',
         value: function render() {
             var AnimatedRow = (0, _reactSpring.animated)(_reactBootstrap.Row);
-            var isVisible = this.state.isVisible;
+            var _state = this.state,
+                isVisible = _state.isVisible,
+                isVisibleTwo = _state.isVisibleTwo;
+
             return _react2.default.createElement(
                 'div',
-                { style: { padding: 30 } },
+                { id: 'aboutme', style: { padding: 30 } },
                 _react2.default.createElement(
                     'div',
                     null,
@@ -3429,22 +3441,22 @@ var Bio = function (_React$Component) {
                     _reactBootstrap.Container,
                     null,
                     _react2.default.createElement(
-                        _reactIntersectionObserver.InView,
-                        { tag: 'div', onChange: this.handleView, threshold: .3, triggerOnce: true },
+                        _reactBootstrap.Row,
+                        null,
                         _react2.default.createElement(
-                            _reactBootstrap.Row,
+                            _reactBootstrap.Col,
                             null,
                             _react2.default.createElement(
-                                _reactBootstrap.Col,
-                                null,
+                                _reactIntersectionObserver.InView,
+                                { tag: 'div', onChange: this.handleView, threshold: .5, triggerOnce: true },
                                 _react2.default.createElement(
                                     _renderprops.Spring,
-                                    { to: { transform: isVisible ? 'translate3d(0,0px,0)' : 'translate3d(0,-40px,0)', opacity: isVisible ? 1 : 0 }, delay: 150, config: _renderprops.config.gentle },
+                                    { to: { transform: isVisible ? 'translate3d(0,0px,0)' : 'translate3d(0,-40px,0)', opacity: isVisible ? 1 : 0 }, delay: 300, config: _renderprops.config.gentle },
                                     function (props) {
                                         return _react2.default.createElement(
                                             AnimatedRow,
                                             { className: 'justify-content-center', style: props },
-                                            _react2.default.createElement('img', { style: { width: 500 }, src: 'https://im.ra.co/images/profiles/lg/jamesgill.jpg?auto=format' })
+                                            _react2.default.createElement('img', { style: { width: 200 }, src: '/assets/profilepiccircle1200.png' })
                                         );
                                     }
                                 ),
@@ -3453,30 +3465,248 @@ var Bio = function (_React$Component) {
                                     { className: 'justify-content-center' },
                                     _react2.default.createElement(
                                         _renderprops.Spring,
-                                        { to: { transform: isVisible ? 'translate3d(0,0px,0)' : 'translate3d(0,-40px,0)', opacity: isVisible ? 1 : 0 }, delay: 150, config: _renderprops.config.gentle },
+                                        { to: { transform: isVisible ? 'translate3d(0,0px,0)' : 'translate3d(-400px,0,0)', opacity: isVisible ? 1 : 0 }, delay: 200, config: _renderprops.config.gentle },
                                         function (props) {
                                             return _react2.default.createElement(
                                                 'a',
-                                                { href: "https://github.com/jimfoambox" },
-                                                _react2.default.createElement('img', { style: _extends({ width: 100, margin: 20 }, props), src: '/assets/githublogo500px.png' })
+                                                { href: "https://github.com/jimfoambox", target: '_blank' },
+                                                _react2.default.createElement('img', { style: _extends({ width: 100, margin: 14 }, props), src: '/assets/githublogo500.png' })
                                             );
                                         }
                                     ),
                                     _react2.default.createElement(
-                                        'a',
-                                        { href: "https://www.linkedin.com/in/james-gill-a7434a35/" },
-                                        _react2.default.createElement('img', { style: { width: 100, margin: 20 }, src: '/assets/linked_in_logo500px.png' })
+                                        _renderprops.Spring,
+                                        { to: { transform: isVisible ? 'translate3d(0,0px,0)' : 'translate3d(400px,0,0)', opacity: isVisible ? 1 : 0 }, delay: 150, config: _renderprops.config.gentle },
+                                        function (props) {
+                                            return _react2.default.createElement(
+                                                'a',
+                                                { href: "https://www.linkedin.com/in/james-gill-a7434a35/", target: '_blank' },
+                                                _react2.default.createElement('img', { style: _extends({ width: 100, margin: 27 }, props), src: '/assets/linkedinlogo500.png' })
+                                            );
+                                        }
                                     ),
                                     _react2.default.createElement(
-                                        'a',
-                                        { href: "https://jamesgill2019.medium.com/" },
-                                        _react2.default.createElement('img', { style: { width: 100, margin: 20 }, src: '/assets/mediumlogo500px.png' })
+                                        _renderprops.Spring,
+                                        { to: { transform: isVisible ? 'translate3d(0,0px,0)' : 'translate3d(400px,0,0)', opacity: isVisible ? 1 : 0 }, delay: 400, config: _renderprops.config.gentle },
+                                        function (props) {
+                                            return _react2.default.createElement(
+                                                'a',
+                                                { href: "https://jamesgill2019.medium.com/", target: '_blank' },
+                                                _react2.default.createElement('img', { style: _extends({ width: 100, margin: 14 }, props), src: '/assets/mediumlogo500.png' })
+                                            );
+                                        }
                                     )
                                 ),
                                 _react2.default.createElement(
-                                    'p',
-                                    null,
-                                    ' My name is James Gill, and I am a full stack developer based out of Jersey City, New Jersey. Prior to my move to the world of software development, I was an audio engineer for 10 years, involved primarily in audio recording, music production, and sound + video system installation.  I first caught the coding bug during an internship right out of college, where I helped design and edit web pages and newsletters.  The more I delved into software, the more I felt myself being pulled into the world of tech.  Eventually it became clear the writing was on the wall, and I decided to make the career change into the world of professional software development.  I am a graduate and teaching fellow at FullStack Academy and have worked ever since to perfect the necessary skills to succeed and be a long-term team asset in the software industry.'
+                                    _renderprops.Spring,
+                                    { to: { transform: isVisible ? 'translate3d(0,-40px,0)' : 'translate3d(0,0px,0)', opacity: isVisible ? 1 : 0 }, delay: 150, config: _renderprops.config.gentle },
+                                    function (props) {
+                                        return _react2.default.createElement(
+                                            'p',
+                                            { style: _extends({ margin: 50 }, props) },
+                                            ' My name is James Gill, and I am a full stack developer based out of Jersey City, New Jersey. Prior to my move to the world of software development, I was an audio engineer for 10 years, involved primarily in audio recording, music production, and sound + video system installation.  I first caught the coding bug during an internship right out of college, where I helped design and edit web pages and newsletters.  The more I delved into software, the more I felt myself being pulled into the world of tech.  Eventually it became clear the writing was on the wall, and I decided to make the career change into the world of professional software development.  I am a graduate and teaching fellow at FullStack Academy and have worked ever since to perfect the necessary skills to succeed and be a long-term team asset in the software industry.'
+                                        );
+                                    }
+                                )
+                            ),
+                            _react2.default.createElement(
+                                _reactIntersectionObserver.InView,
+                                { tag: 'div', onChange: this.secondHandleView, threshold: .3, triggerOnce: true },
+                                _react2.default.createElement(
+                                    _reactBootstrap.Row,
+                                    { className: 'justify-content-center' },
+                                    _react2.default.createElement(
+                                        _reactBootstrap.Col,
+                                        null,
+                                        _react2.default.createElement(
+                                            _renderprops.Spring,
+                                            { to: { transform: isVisibleTwo ? 'translate3d(0,0px,0)' : 'translate3d(0,-40px,0)', opacity: isVisibleTwo ? 1 : 0 }, delay: 200, config: _renderprops.config.gentle },
+                                            function (props) {
+                                                return _react2.default.createElement(
+                                                    AnimatedRow,
+                                                    { className: 'justify-content-center', style: props },
+                                                    _react2.default.createElement(
+                                                        'h4',
+                                                        null,
+                                                        'Proficient'
+                                                    )
+                                                );
+                                            }
+                                        ),
+                                        _react2.default.createElement(
+                                            _renderprops.Spring,
+                                            { to: { transform: isVisibleTwo ? 'translate3d(0,0px,0)' : 'translate3d(0,-40px,0)', opacity: isVisibleTwo ? 1 : 0 }, delay: 300, config: _renderprops.config.gentle },
+                                            function (props) {
+                                                return _react2.default.createElement(
+                                                    AnimatedRow,
+                                                    { className: 'justify-content-center', style: props },
+                                                    _react2.default.createElement(
+                                                        'p',
+                                                        null,
+                                                        'Javascript | HTML | CSS'
+                                                    )
+                                                );
+                                            }
+                                        ),
+                                        _react2.default.createElement(
+                                            _renderprops.Spring,
+                                            { to: { transform: isVisibleTwo ? 'translate3d(0,0px,0)' : 'translate3d(0,-40px,0)', opacity: isVisibleTwo ? 1 : 0 }, delay: 400, config: _renderprops.config.gentle },
+                                            function (props) {
+                                                return _react2.default.createElement(
+                                                    AnimatedRow,
+                                                    { className: 'justify-content-center', style: props },
+                                                    _react2.default.createElement(
+                                                        'p',
+                                                        null,
+                                                        'React | Redux | Git/Github'
+                                                    )
+                                                );
+                                            }
+                                        ),
+                                        _react2.default.createElement(
+                                            _renderprops.Spring,
+                                            { to: { transform: isVisibleTwo ? 'translate3d(0,0px,0)' : 'translate3d(0,-40px,0)', opacity: isVisibleTwo ? 1 : 0 }, delay: 500, config: _renderprops.config.gentle },
+                                            function (props) {
+                                                return _react2.default.createElement(
+                                                    AnimatedRow,
+                                                    { className: 'justify-content-center', style: props },
+                                                    _react2.default.createElement(
+                                                        'p',
+                                                        null,
+                                                        'Node.js | Express | Sequelize'
+                                                    )
+                                                );
+                                            }
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        _reactBootstrap.Col,
+                                        null,
+                                        _react2.default.createElement(
+                                            _renderprops.Spring,
+                                            { to: { transform: isVisibleTwo ? 'translate3d(0,0px,0)' : 'translate3d(0,-40px,0)', opacity: isVisibleTwo ? 1 : 0 }, delay: 200, config: _renderprops.config.gentle },
+                                            function (props) {
+                                                return _react2.default.createElement(
+                                                    AnimatedRow,
+                                                    { className: 'justify-content-center', style: props },
+                                                    _react2.default.createElement(
+                                                        'h4',
+                                                        null,
+                                                        'Knowledgable'
+                                                    )
+                                                );
+                                            }
+                                        ),
+                                        _react2.default.createElement(
+                                            _renderprops.Spring,
+                                            { to: { transform: isVisibleTwo ? 'translate3d(0,0px,0)' : 'translate3d(0,-40px,0)', opacity: isVisibleTwo ? 1 : 0 }, delay: 300, config: _renderprops.config.gentle },
+                                            function (props) {
+                                                return _react2.default.createElement(
+                                                    AnimatedRow,
+                                                    { className: 'justify-content-center', style: props },
+                                                    _react2.default.createElement(
+                                                        'p',
+                                                        null,
+                                                        'React-Native | PostgresSQL | Webpack'
+                                                    )
+                                                );
+                                            }
+                                        ),
+                                        _react2.default.createElement(
+                                            _renderprops.Spring,
+                                            { to: { transform: isVisibleTwo ? 'translate3d(0,0px,0)' : 'translate3d(0,-40px,0)', opacity: isVisibleTwo ? 1 : 0 }, delay: 400, config: _renderprops.config.gentle },
+                                            function (props) {
+                                                return _react2.default.createElement(
+                                                    AnimatedRow,
+                                                    { className: 'justify-content-center', style: props },
+                                                    _react2.default.createElement(
+                                                        'p',
+                                                        null,
+                                                        'Mocha | Chai | Google Firebase'
+                                                    )
+                                                );
+                                            }
+                                        ),
+                                        _react2.default.createElement(
+                                            _renderprops.Spring,
+                                            { to: { transform: isVisibleTwo ? 'translate3d(0,0px,0)' : 'translate3d(0,-40px,0)', opacity: isVisibleTwo ? 1 : 0 }, delay: 500, config: _renderprops.config.gentle },
+                                            function (props) {
+                                                return _react2.default.createElement(
+                                                    AnimatedRow,
+                                                    { className: 'justify-content-center', style: props },
+                                                    _react2.default.createElement(
+                                                        'p',
+                                                        null,
+                                                        'Google Cloud APIs | Heroku'
+                                                    )
+                                                );
+                                            }
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        _reactBootstrap.Col,
+                                        null,
+                                        _react2.default.createElement(
+                                            _renderprops.Spring,
+                                            { to: { transform: isVisibleTwo ? 'translate3d(0,0px,0)' : 'translate3d(0,-40px,0)', opacity: isVisibleTwo ? 1 : 0 }, delay: 200, config: _renderprops.config.gentle },
+                                            function (props) {
+                                                return _react2.default.createElement(
+                                                    AnimatedRow,
+                                                    { className: 'justify-content-center', style: props },
+                                                    _react2.default.createElement(
+                                                        'h4',
+                                                        null,
+                                                        'Additional Skills'
+                                                    )
+                                                );
+                                            }
+                                        ),
+                                        _react2.default.createElement(
+                                            _renderprops.Spring,
+                                            { to: { transform: isVisibleTwo ? 'translate3d(0,0px,0)' : 'translate3d(0,-40px,0)', opacity: isVisibleTwo ? 1 : 0 }, delay: 300, config: _renderprops.config.gentle },
+                                            function (props) {
+                                                return _react2.default.createElement(
+                                                    AnimatedRow,
+                                                    { className: 'justify-content-center', style: props },
+                                                    _react2.default.createElement(
+                                                        'p',
+                                                        null,
+                                                        'Wordpress | Shopify | React-Bootstrap'
+                                                    )
+                                                );
+                                            }
+                                        ),
+                                        _react2.default.createElement(
+                                            _renderprops.Spring,
+                                            { to: { transform: isVisibleTwo ? 'translate3d(0,0px,0)' : 'translate3d(0,-40px,0)', opacity: isVisibleTwo ? 1 : 0 }, delay: 400, config: _renderprops.config.gentle },
+                                            function (props) {
+                                                return _react2.default.createElement(
+                                                    AnimatedRow,
+                                                    { className: 'justify-content-center', style: props },
+                                                    _react2.default.createElement(
+                                                        'p',
+                                                        null,
+                                                        'Testem | React Spring'
+                                                    )
+                                                );
+                                            }
+                                        ),
+                                        _react2.default.createElement(
+                                            _renderprops.Spring,
+                                            { to: { transform: isVisibleTwo ? 'translate3d(0,0px,0)' : 'translate3d(0,-40px,0)', opacity: isVisibleTwo ? 1 : 0 }, delay: 500, config: _renderprops.config.gentle },
+                                            function (props) {
+                                                return _react2.default.createElement(
+                                                    AnimatedRow,
+                                                    { className: 'justify-content-center', style: props },
+                                                    _react2.default.createElement(
+                                                        'p',
+                                                        null,
+                                                        'Phaser.js'
+                                                    )
+                                                );
+                                            }
+                                        )
+                                    )
                                 )
                             )
                         )
@@ -3506,6 +3736,8 @@ Object.defineProperty(exports, "__esModule", ({
     value: true
 }));
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
@@ -3514,7 +3746,21 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactBootstrap = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/index.js");
 
+var _emailjsCom = __webpack_require__(/*! emailjs-com */ "./node_modules/emailjs-com/source/index.js");
+
+var emailjs = _interopRequireWildcard(_emailjsCom);
+
+var _reactGoogleRecaptcha = __webpack_require__(/*! react-google-recaptcha */ "./node_modules/react-google-recaptcha/lib/esm/index.js");
+
+var _reactGoogleRecaptcha2 = _interopRequireDefault(_reactGoogleRecaptcha);
+
+var _renderprops = __webpack_require__(/*! react-spring/renderprops */ "./node_modules/react-spring/renderprops.js");
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -3528,22 +3774,103 @@ var Contact = function (_React$Component) {
     function Contact() {
         _classCallCheck(this, Contact);
 
-        return _possibleConstructorReturn(this, (Contact.__proto__ || Object.getPrototypeOf(Contact)).apply(this, arguments));
+        var _this = _possibleConstructorReturn(this, (Contact.__proto__ || Object.getPrototypeOf(Contact)).call(this));
+
+        _this.state = {
+            name: '',
+            email: '',
+            message: '',
+            sent: false
+        };
+        _this.onSubmit = _this.onSubmit.bind(_this);
+        _this.handleChange = _this.handleChange.bind(_this);
+        return _this;
     }
 
     _createClass(Contact, [{
+        key: 'onSubmit',
+        value: function onSubmit(event) {
+            if (this.state.name === '') {
+                event.preventDefault();
+                this.setState({
+                    name: 'This field is required.'
+                });
+            }
+            if (this.state.email === '') {
+                event.preventDefault();
+                this.setState({
+                    email: 'This field is required.'
+                });
+            }
+            if (this.state.message === '') {
+                event.preventDefault();
+                this.setState({
+                    message: 'This field is required.'
+                });
+            } else {
+                event.preventDefault();
+                var templateParams = {
+                    from_name: this.state.name,
+                    from_email: this.state.email,
+                    to_name: 'contact_service',
+                    subject: 'Portfolio Site Inquiry',
+                    message_html: this.state.message
+                };
+                emailjs.send('contact_service', 'contact-form', templateParams, 'user_asUk7rz404izhAZwf5wOB');
+                this.setState({
+                    name: '',
+                    email: '',
+                    message: '',
+                    sent: true
+                });
+            }
+        }
+    }, {
+        key: 'handleChange',
+        value: function handleChange(event) {
+            this.setState(_defineProperty({}, event.target.name, event.target.value));
+        }
+    }, {
         key: 'render',
         value: function render() {
+            var _state = this.state,
+                name = _state.name,
+                email = _state.email,
+                message = _state.message,
+                sent = _state.sent;
+
+            if (sent) {
+                return _react2.default.createElement(
+                    'div',
+                    null,
+                    _react2.default.createElement(
+                        _renderprops.Spring,
+                        { from: { transform: 'translate3d(0,-40px,0)', opacity: 0 }, to: { transform: 'translate3d(0,0px,0)', opacity: 1 }, delay: 100, config: _renderprops.config.gentle },
+                        function (props) {
+                            return _react2.default.createElement(
+                                'h3',
+                                { style: _extends({ textAlign: 'center', margin: 150 }, props) },
+                                'Message Sent'
+                            );
+                        }
+                    )
+                );
+            }
             return _react2.default.createElement(
                 'div',
-                { style: { padding: 30 } },
+                { id: 'contact', style: { padding: 30 } },
                 _react2.default.createElement(
                     'div',
                     null,
                     _react2.default.createElement(
                         'h1',
-                        { style: { textAlign: 'center', paddingBottom: 10 } },
+                        { style: { textAlign: 'center', paddingBottom: 10, paddingTop: 40 } },
                         'Contact'
+                    ),
+                    _react2.default.createElement(
+                        'p',
+                        { style: { textAlign: 'center' } },
+                        'Reach out to me any time: I\'d love to hear from you!'
                     )
                 ),
                 _react2.default.createElement(
@@ -3558,7 +3885,7 @@ var Contact = function (_React$Component) {
                             null,
                             _react2.default.createElement(
                                 _reactBootstrap.Form,
-                                null,
+                                { onSubmit: this.onSubmit },
                                 _react2.default.createElement(
                                     _reactBootstrap.Form.Group,
                                     { controlId: 'exampleForm.ControlInput1' },
@@ -3567,20 +3894,21 @@ var Contact = function (_React$Component) {
                                         null,
                                         'Name'
                                     ),
-                                    _react2.default.createElement(_reactBootstrap.Form.Control, { type: 'text', placeholder: 'Your name here', style: { width: 300 } }),
+                                    _react2.default.createElement(_reactBootstrap.Form.Control, { onChange: this.handleChange, name: 'name', value: name, type: 'text', placeholder: 'Your name here', style: { width: 300 } }),
                                     _react2.default.createElement(
                                         _reactBootstrap.Form.Label,
                                         null,
                                         'Email address'
                                     ),
-                                    _react2.default.createElement(_reactBootstrap.Form.Control, { type: 'email', placeholder: 'name@example.com', style: { width: 300 } }),
+                                    _react2.default.createElement(_reactBootstrap.Form.Control, { onChange: this.handleChange, name: 'email', value: email, type: 'email', placeholder: 'name@example.com', style: { width: 300 } }),
                                     _react2.default.createElement(
                                         _reactBootstrap.Form.Label,
                                         null,
                                         'Message'
                                     ),
-                                    _react2.default.createElement(_reactBootstrap.Form.Control, { as: 'textarea', type: 'textarea', rows: 3, placeholder: 'Enter your message here', style: { width: 300 } })
+                                    _react2.default.createElement(_reactBootstrap.Form.Control, { onChange: this.handleChange, name: 'message', value: message, as: 'textarea', type: 'textarea', rows: 3, placeholder: 'Enter your message here', style: { width: 300 } })
                                 ),
+                                _react2.default.createElement(_reactGoogleRecaptcha2.default, { sitekey: '6LdZjFsaAAAAAJ2DqNJzjtqV9puWStQi6knj6mkX' }),
                                 _react2.default.createElement(
                                     _reactBootstrap.Button,
                                     { variant: 'primary', type: 'submit' },
@@ -3741,7 +4069,7 @@ var Portfolio = function (_React$Component) {
             var isVisible = this.state.isVisible;
             return _react2.default.createElement(
                 'div',
-                { style: { padding: 30 } },
+                { id: 'portfolio', style: { padding: 30 } },
                 _react2.default.createElement(
                     'div',
                     null,
@@ -3753,13 +4081,13 @@ var Portfolio = function (_React$Component) {
                 ),
                 _react2.default.createElement(
                     _reactIntersectionObserver.InView,
-                    { tag: 'div', onChange: this.handleView, threshold: .3, triggerOnce: true },
+                    { tag: 'div', onChange: this.handleView, threshold: .4, triggerOnce: true },
                     _react2.default.createElement(
                         _reactBootstrap.Container,
                         null,
                         _react2.default.createElement(
                             _reactBootstrap.Row,
-                            null,
+                            { style: { justifyContent: 'center' } },
                             _react2.default.createElement(
                                 _renderprops.Spring,
                                 { to: { transform: isVisible ? 'translate3d(0,0px,0)' : 'translate3d(0,-40px,0)', opacity: isVisible ? 1 : 0 }, delay: 150, config: _renderprops.config.gentle },
@@ -3770,7 +4098,11 @@ var Portfolio = function (_React$Component) {
                                         _react2.default.createElement(
                                             _reactBootstrap.Row,
                                             { style: { justifyContent: 'center' } },
-                                            _react2.default.createElement(_reactBootstrap.Card.Img, { variant: 'top', src: '/assets/parallelscreenlogo600.png', style: { width: 286 } })
+                                            _react2.default.createElement(
+                                                'a',
+                                                { href: "https://youtu.be/Jgi-ngC3Yl0", target: '_blank' },
+                                                _react2.default.createElement(_reactBootstrap.Card.Img, { variant: 'top', src: '/assets/parallelscreenlogo600.png', style: { width: 286 } })
+                                            )
                                         ),
                                         _react2.default.createElement(
                                             _reactBootstrap.Card.Body,
@@ -3787,7 +4119,7 @@ var Portfolio = function (_React$Component) {
                                             ),
                                             _react2.default.createElement(
                                                 'a',
-                                                { href: "https://github.com/jimfoambox" },
+                                                { href: "https://youtu.be/Jgi-ngC3Yl0", target: '_blank' },
                                                 _react2.default.createElement(
                                                     _reactBootstrap.Button,
                                                     { variant: 'primary' },
@@ -3808,7 +4140,11 @@ var Portfolio = function (_React$Component) {
                                         _react2.default.createElement(
                                             _reactBootstrap.Row,
                                             { style: { justifyContent: 'center' } },
-                                            _react2.default.createElement(_reactBootstrap.Card.Img, { variant: 'top', src: '/assets/inspirescreenlogo600.png', style: { width: 286 } })
+                                            _react2.default.createElement(
+                                                'a',
+                                                { href: "https://www.youtube.com/watch?v=56KK8hrHAII&feature=youtu.be", target: '_blank' },
+                                                _react2.default.createElement(_reactBootstrap.Card.Img, { variant: 'top', src: '/assets/inspirescreenlogo600.png', style: { width: 286 } })
+                                            )
                                         ),
                                         _react2.default.createElement(
                                             _reactBootstrap.Card.Body,
@@ -3825,7 +4161,7 @@ var Portfolio = function (_React$Component) {
                                             ),
                                             _react2.default.createElement(
                                                 'a',
-                                                { href: "https://github.com/jimfoambox" },
+                                                { href: "https://www.youtube.com/watch?v=56KK8hrHAII&feature=youtu.be", target: '_blank' },
                                                 _react2.default.createElement(
                                                     _reactBootstrap.Button,
                                                     { variant: 'primary' },
@@ -3846,7 +4182,11 @@ var Portfolio = function (_React$Component) {
                                         _react2.default.createElement(
                                             _reactBootstrap.Row,
                                             { style: { justifyContent: 'center' } },
-                                            _react2.default.createElement(_reactBootstrap.Card.Img, { variant: 'top', src: '/assets/fallenplanetlogo600.png', style: { width: 286 } })
+                                            _react2.default.createElement(
+                                                'a',
+                                                { href: "https://fallen-planet.herokuapp.com/", target: '_blank' },
+                                                _react2.default.createElement(_reactBootstrap.Card.Img, { variant: 'top', src: '/assets/fallenplanetlogo600.png', style: { width: 286 } })
+                                            )
                                         ),
                                         _react2.default.createElement(
                                             _reactBootstrap.Card.Body,
@@ -3863,45 +4203,11 @@ var Portfolio = function (_React$Component) {
                                             ),
                                             _react2.default.createElement(
                                                 'a',
-                                                { href: "https://github.com/jimfoambox" },
+                                                { href: "https://fallen-planet.herokuapp.com/", target: '_blank' },
                                                 _react2.default.createElement(
                                                     _reactBootstrap.Button,
                                                     { variant: 'primary' },
                                                     'Play The Game'
-                                                )
-                                            )
-                                        )
-                                    );
-                                }
-                            ),
-                            _react2.default.createElement(
-                                _renderprops.Spring,
-                                { to: { transform: isVisible ? 'translate3d(0,0px,0)' : 'translate3d(0,-40px,0)', opacity: isVisible ? 1 : 0 }, delay: 600, config: _renderprops.config.gentle },
-                                function (props) {
-                                    return _react2.default.createElement(
-                                        AnimatedCard,
-                                        { style: _extends({ width: '18rem', margin: '20px' }, props) },
-                                        _react2.default.createElement(_reactBootstrap.Card.Img, { variant: 'top', src: 'holder.js/100px180' }),
-                                        _react2.default.createElement(
-                                            _reactBootstrap.Card.Body,
-                                            null,
-                                            _react2.default.createElement(
-                                                _reactBootstrap.Card.Title,
-                                                null,
-                                                'Whistler'
-                                            ),
-                                            _react2.default.createElement(
-                                                _reactBootstrap.Card.Text,
-                                                null,
-                                                'An FM digital synthesizer built in Javascript using the Tone.js library.'
-                                            ),
-                                            _react2.default.createElement(
-                                                'a',
-                                                { href: "https://github.com/jimfoambox" },
-                                                _react2.default.createElement(
-                                                    _reactBootstrap.Button,
-                                                    { variant: 'primary' },
-                                                    'Go somewhere'
                                                 )
                                             )
                                         )
@@ -3941,6 +4247,8 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 
+var _reactRouterHashLink = __webpack_require__(/*! react-router-hash-link */ "./node_modules/react-router-hash-link/dist/react-router-hash-link.esm.js");
+
 var _reactBootstrap = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/index.js");
 
 var _Home = __webpack_require__(/*! ./Home */ "./src/components/Home.js");
@@ -3973,7 +4281,16 @@ var Routes = function Routes() {
                 null,
                 _react2.default.createElement(
                     _reactBootstrap.Navbar,
-                    { bg: 'light', expand: 'lg' },
+                    { bg: 'dark', expand: 'lg' },
+                    _react2.default.createElement(
+                        _reactBootstrap.Nav,
+                        null,
+                        _react2.default.createElement(
+                            'div',
+                            null,
+                            _react2.default.createElement('img', { src: '/assets/jamesgilllogo.png', style: { height: 40 } })
+                        )
+                    ),
                     _react2.default.createElement(
                         _reactBootstrap.Nav,
                         { className: 'ml-auto' },
@@ -3982,7 +4299,7 @@ var Routes = function Routes() {
                             { eventkey: 1, href: '/' },
                             _react2.default.createElement(
                                 _reactBootstrap.Nav.Link,
-                                { as: _reactRouterDom.Link, to: '/' },
+                                { as: _reactRouterHashLink.HashLink, className: 'navLink', to: '/' },
                                 'Home'
                             )
                         ),
@@ -3991,7 +4308,7 @@ var Routes = function Routes() {
                             { eventkey: 2, href: '/' },
                             _react2.default.createElement(
                                 _reactBootstrap.Nav.Link,
-                                { as: _reactRouterDom.Link, to: '/portfolio' },
+                                { as: _reactRouterHashLink.HashLink, className: 'navLink', to: '/#portfolio' },
                                 'Portfolio'
                             )
                         ),
@@ -4000,7 +4317,7 @@ var Routes = function Routes() {
                             { eventkey: 3, href: '/' },
                             _react2.default.createElement(
                                 _reactBootstrap.Nav.Link,
-                                { as: _reactRouterDom.Link, to: '/bio' },
+                                { as: _reactRouterHashLink.HashLink, className: 'navLink', to: '/#aboutme' },
                                 'About Me'
                             )
                         ),
@@ -4009,7 +4326,7 @@ var Routes = function Routes() {
                             { eventkey: 4, href: '/' },
                             _react2.default.createElement(
                                 _reactBootstrap.Nav.Link,
-                                { as: _reactRouterDom.Link, to: '/contact' },
+                                { as: _reactRouterHashLink.HashLink, className: 'navLink', to: '/#contact' },
                                 'Contact'
                             )
                         )
@@ -4022,23 +4339,20 @@ var Routes = function Routes() {
                 _react2.default.createElement(
                     _reactRouterDom.Switch,
                     null,
-                    _react2.default.createElement(_reactRouterDom.Route, { path: '/', exact: true, component: _Home2.default }),
-                    _react2.default.createElement(_reactRouterDom.Route, { path: '/portfolio', exact: true, component: _Portfolio2.default }),
-                    _react2.default.createElement(_reactRouterDom.Route, { path: '/bio', exact: true, component: _Bio2.default }),
-                    _react2.default.createElement(_reactRouterDom.Route, { path: '/contact', exact: true, component: _Contact2.default })
+                    _react2.default.createElement(_reactRouterDom.Route, { path: '/', component: _Home2.default })
                 )
             ),
             _react2.default.createElement(
                 'footer',
-                { style: { backgroundColor: '#000' } },
+                { style: { backgroundColor: '#343a40' } },
                 _react2.default.createElement(
                     'div',
                     { style: { textAlign: 'center', color: "#FFF" } },
-                    '\xA9 Copyright 2021 James Gill.  Built with',
+                    '\xA9 Copyright 2021 James Gill. \xA0\xA0\xA0\xA0\xA0 Built with',
                     _react2.default.createElement(
                         'a',
                         { href: "https://reactjs.org/" },
-                        _react2.default.createElement('img', { style: { width: 40, marginRight: 10 }, src: '/assets/reactLogo500px.png' })
+                        _react2.default.createElement('img', { style: { width: 40, marginLeft: 10, marginRight: 10 }, src: '/assets/reactLogo500px.png' })
                     ),
                     _react2.default.createElement(
                         'a',
@@ -14928,7 +15242,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".homeBody {\n    display: flex;\n    flex-direction: column;\n}\n\n.homeComponents {\n    padding: 50px;\n}\n\n.sliderbg {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh; \n    background-size: cover;\n    background-position: center;\n    will-change: opacity;\n  }\n\n.sliderDiv {\n    position: relative;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh; \n    background-size: cover;\n    background-position: center;\n}", "",{"version":3,"sources":["webpack://./public/styles.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,sBAAsB;AAC1B;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,kBAAkB;IAClB,MAAM;IACN,OAAO;IACP,YAAY;IACZ,aAAa;IACb,sBAAsB;IACtB,2BAA2B;IAC3B,oBAAoB;EACtB;;AAEF;IACI,kBAAkB;IAClB,MAAM;IACN,OAAO;IACP,YAAY;IACZ,aAAa;IACb,sBAAsB;IACtB,2BAA2B;AAC/B","sourcesContent":[".homeBody {\n    display: flex;\n    flex-direction: column;\n}\n\n.homeComponents {\n    padding: 50px;\n}\n\n.sliderbg {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh; \n    background-size: cover;\n    background-position: center;\n    will-change: opacity;\n  }\n\n.sliderDiv {\n    position: relative;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh; \n    background-size: cover;\n    background-position: center;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".homeBody {\n    display: flex;\n    flex-direction: column;\n}\n\n.homeComponents {\n    padding: 50px;\n}\n\n.sliderbg {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh; \n    background-size: cover;\n    background-position: center;\n    will-change: opacity;\n  }\n\n.sliderDiv {\n    position: relative;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh; \n    background-size: cover;\n    background-position: center;\n}\n\n.navLink {\n    color: #fff !important;\n}\n\n.navLink:hover {\n    color: darkgrey !important;\n}", "",{"version":3,"sources":["webpack://./public/styles.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,sBAAsB;AAC1B;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,kBAAkB;IAClB,MAAM;IACN,OAAO;IACP,YAAY;IACZ,aAAa;IACb,sBAAsB;IACtB,2BAA2B;IAC3B,oBAAoB;EACtB;;AAEF;IACI,kBAAkB;IAClB,MAAM;IACN,OAAO;IACP,YAAY;IACZ,aAAa;IACb,sBAAsB;IACtB,2BAA2B;AAC/B;;AAEA;IACI,sBAAsB;AAC1B;;AAEA;IACI,0BAA0B;AAC9B","sourcesContent":[".homeBody {\n    display: flex;\n    flex-direction: column;\n}\n\n.homeComponents {\n    padding: 50px;\n}\n\n.sliderbg {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh; \n    background-size: cover;\n    background-position: center;\n    will-change: opacity;\n  }\n\n.sliderDiv {\n    position: relative;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh; \n    background-size: cover;\n    background-position: center;\n}\n\n.navLink {\n    color: #fff !important;\n}\n\n.navLink:hover {\n    color: darkgrey !important;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -15673,6 +15987,191 @@ function transitionEnd(element, handler, duration, padding) {
     remove();
   };
 }
+
+/***/ }),
+
+/***/ "./node_modules/emailjs-com/source/index.js":
+/*!**************************************************!*\
+  !*** ./node_modules/emailjs-com/source/index.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.EmailJSResponseStatus = exports.sendForm = exports.send = exports.init = void 0;
+var EmailJSResponseStatus_1 = __webpack_require__(/*! ./models/EmailJSResponseStatus */ "./node_modules/emailjs-com/source/models/EmailJSResponseStatus.js");
+Object.defineProperty(exports, "EmailJSResponseStatus", ({ enumerable: true, get: function () { return EmailJSResponseStatus_1.EmailJSResponseStatus; } }));
+var UI_1 = __webpack_require__(/*! ./services/ui/UI */ "./node_modules/emailjs-com/source/services/ui/UI.js");
+var _userID = null;
+var _origin = 'https://api.emailjs.com';
+function sendPost(url, data, headers) {
+    if (headers === void 0) { headers = {}; }
+    return new Promise(function (resolve, reject) {
+        var xhr = new XMLHttpRequest();
+        xhr.addEventListener('load', function (event) {
+            var responseStatus = new EmailJSResponseStatus_1.EmailJSResponseStatus(event.target);
+            if (responseStatus.status === 200 || responseStatus.text === 'OK') {
+                resolve(responseStatus);
+            }
+            else {
+                reject(responseStatus);
+            }
+        });
+        xhr.addEventListener('error', function (event) {
+            reject(new EmailJSResponseStatus_1.EmailJSResponseStatus(event.target));
+        });
+        xhr.open('POST', url, true);
+        for (var key in headers) {
+            xhr.setRequestHeader(key, headers[key]);
+        }
+        xhr.send(data);
+    });
+}
+function appendGoogleCaptcha(templatePrams) {
+    var element = document && document.getElementById('g-recaptcha-response');
+    if (element && element.value) {
+        templatePrams['g-recaptcha-response'] = element.value;
+    }
+    element = null;
+    return templatePrams;
+}
+function fixIdSelector(selector) {
+    if (selector[0] !== '#' && selector[0] !== '.') {
+        return '#' + selector;
+    }
+    return selector;
+}
+/**
+ * Initiation
+ * @param {string} userID - set the EmailJS user ID
+ * @param {string} origin - set the EmailJS origin
+ */
+function init(userID, origin) {
+    _userID = userID;
+    _origin = origin || 'https://api.emailjs.com';
+}
+exports.init = init;
+/**
+ * Send a template to the specific EmailJS service
+ * @param {string} serviceID - the EmailJS service ID
+ * @param {string} templateID - the EmailJS template ID
+ * @param {Object} templatePrams - the template params, what will be set to the EmailJS template
+ * @param {string} userID - the EmailJS user ID
+ * @returns {Promise<EmailJSResponseStatus>}
+ */
+function send(serviceID, templateID, templatePrams, userID) {
+    var params = {
+        lib_version: '2.6.4',
+        user_id: userID || _userID,
+        service_id: serviceID,
+        template_id: templateID,
+        template_params: appendGoogleCaptcha(templatePrams)
+    };
+    return sendPost(_origin + '/api/v1.0/email/send', JSON.stringify(params), {
+        'Content-type': 'application/json'
+    });
+}
+exports.send = send;
+/**
+ * Send a form the specific EmailJS service
+ * @param {string} serviceID - the EmailJS service ID
+ * @param {string} templateID - the EmailJS template ID
+ * @param {string | HTMLFormElement} form - the form element or selector
+ * @param {string} userID - the EmailJS user ID
+ * @returns {Promise<EmailJSResponseStatus>}
+ */
+function sendForm(serviceID, templateID, form, userID) {
+    if (typeof form === 'string') {
+        form = document.querySelector(fixIdSelector(form));
+    }
+    if (!form || form.nodeName !== 'FORM') {
+        throw 'Expected the HTML form element or the style selector of form';
+    }
+    UI_1.UI.progressState(form);
+    var formData = new FormData(form);
+    formData.append('lib_version', '2.6.4');
+    formData.append('service_id', serviceID);
+    formData.append('template_id', templateID);
+    formData.append('user_id', userID || _userID);
+    return sendPost(_origin + '/api/v1.0/email/send-form', formData)
+        .then(function (response) {
+        UI_1.UI.successState(form);
+        return response;
+    }, function (error) {
+        UI_1.UI.errorState(form);
+        return Promise.reject(error);
+    });
+}
+exports.sendForm = sendForm;
+exports.default = {
+    init: init,
+    send: send,
+    sendForm: sendForm
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/emailjs-com/source/models/EmailJSResponseStatus.js":
+/*!*************************************************************************!*\
+  !*** ./node_modules/emailjs-com/source/models/EmailJSResponseStatus.js ***!
+  \*************************************************************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.EmailJSResponseStatus = void 0;
+var EmailJSResponseStatus = /** @class */ (function () {
+    function EmailJSResponseStatus(httpResponse) {
+        this.status = httpResponse.status;
+        this.text = httpResponse.responseText;
+    }
+    return EmailJSResponseStatus;
+}());
+exports.EmailJSResponseStatus = EmailJSResponseStatus;
+
+
+/***/ }),
+
+/***/ "./node_modules/emailjs-com/source/services/ui/UI.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/emailjs-com/source/services/ui/UI.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.UI = void 0;
+var UI = /** @class */ (function () {
+    function UI() {
+    }
+    UI.clearAll = function (form) {
+        form.classList.remove(this.PROGRESS);
+        form.classList.remove(this.DONE);
+        form.classList.remove(this.ERROR);
+    };
+    UI.progressState = function (form) {
+        this.clearAll(form);
+        form.classList.add(this.PROGRESS);
+    };
+    UI.successState = function (form) {
+        form.classList.remove(this.PROGRESS);
+        form.classList.add(this.DONE);
+    };
+    UI.errorState = function (form) {
+        form.classList.remove(this.PROGRESS);
+        form.classList.add(this.ERROR);
+    };
+    UI.PROGRESS = 'emailjs-sending';
+    UI.DONE = 'emailjs-success';
+    UI.ERROR = 'emailjs-error';
+    return UI;
+}());
+exports.UI = UI;
+
 
 /***/ }),
 
@@ -18439,6 +18938,269 @@ var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
 
 module.exports = ReactPropTypesSecret;
 
+
+/***/ }),
+
+/***/ "./node_modules/react-async-script/lib/esm/async-script-loader.js":
+/*!************************************************************************!*\
+  !*** ./node_modules/react-async-script/lib/esm/async-script-loader.js ***!
+  \************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ makeAsyncScript)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! hoist-non-react-statics */ "./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js");
+/* harmony import */ var hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_2__);
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function _inheritsLoose(subClass, superClass) { subClass.prototype = Object.create(superClass.prototype); subClass.prototype.constructor = subClass; subClass.__proto__ = superClass; }
+
+
+
+
+var SCRIPT_MAP = {}; // A counter used to generate a unique id for each component that uses the function
+
+var idCount = 0;
+function makeAsyncScript(getScriptURL, options) {
+  options = options || {};
+  return function wrapWithAsyncScript(WrappedComponent) {
+    var wrappedComponentName = WrappedComponent.displayName || WrappedComponent.name || "Component";
+
+    var AsyncScriptLoader =
+    /*#__PURE__*/
+    function (_Component) {
+      _inheritsLoose(AsyncScriptLoader, _Component);
+
+      function AsyncScriptLoader(props, context) {
+        var _this;
+
+        _this = _Component.call(this, props, context) || this;
+        _this.state = {};
+        _this.__scriptURL = "";
+        return _this;
+      }
+
+      var _proto = AsyncScriptLoader.prototype;
+
+      _proto.asyncScriptLoaderGetScriptLoaderID = function asyncScriptLoaderGetScriptLoaderID() {
+        if (!this.__scriptLoaderID) {
+          this.__scriptLoaderID = "async-script-loader-" + idCount++;
+        }
+
+        return this.__scriptLoaderID;
+      };
+
+      _proto.setupScriptURL = function setupScriptURL() {
+        this.__scriptURL = typeof getScriptURL === "function" ? getScriptURL() : getScriptURL;
+        return this.__scriptURL;
+      };
+
+      _proto.asyncScriptLoaderHandleLoad = function asyncScriptLoaderHandleLoad(state) {
+        var _this2 = this;
+
+        // use reacts setState callback to fire props.asyncScriptOnLoad with new state/entry
+        this.setState(state, function () {
+          return _this2.props.asyncScriptOnLoad && _this2.props.asyncScriptOnLoad(_this2.state);
+        });
+      };
+
+      _proto.asyncScriptLoaderTriggerOnScriptLoaded = function asyncScriptLoaderTriggerOnScriptLoaded() {
+        var mapEntry = SCRIPT_MAP[this.__scriptURL];
+
+        if (!mapEntry || !mapEntry.loaded) {
+          throw new Error("Script is not loaded.");
+        }
+
+        for (var obsKey in mapEntry.observers) {
+          mapEntry.observers[obsKey](mapEntry);
+        }
+
+        delete window[options.callbackName];
+      };
+
+      _proto.componentDidMount = function componentDidMount() {
+        var _this3 = this;
+
+        var scriptURL = this.setupScriptURL();
+        var key = this.asyncScriptLoaderGetScriptLoaderID();
+        var _options = options,
+            globalName = _options.globalName,
+            callbackName = _options.callbackName,
+            scriptId = _options.scriptId; // check if global object already attached to window
+
+        if (globalName && typeof window[globalName] !== "undefined") {
+          SCRIPT_MAP[scriptURL] = {
+            loaded: true,
+            observers: {}
+          };
+        } // check if script loading already
+
+
+        if (SCRIPT_MAP[scriptURL]) {
+          var entry = SCRIPT_MAP[scriptURL]; // if loaded or errored then "finish"
+
+          if (entry && (entry.loaded || entry.errored)) {
+            this.asyncScriptLoaderHandleLoad(entry);
+            return;
+          } // if still loading then callback to observer queue
+
+
+          entry.observers[key] = function (entry) {
+            return _this3.asyncScriptLoaderHandleLoad(entry);
+          };
+
+          return;
+        }
+        /*
+         * hasn't started loading
+         * start the "magic"
+         * setup script to load and observers
+         */
+
+
+        var observers = {};
+
+        observers[key] = function (entry) {
+          return _this3.asyncScriptLoaderHandleLoad(entry);
+        };
+
+        SCRIPT_MAP[scriptURL] = {
+          loaded: false,
+          observers: observers
+        };
+        var script = document.createElement("script");
+        script.src = scriptURL;
+        script.async = true;
+
+        for (var attribute in options.attributes) {
+          script.setAttribute(attribute, options.attributes[attribute]);
+        }
+
+        if (scriptId) {
+          script.id = scriptId;
+        }
+
+        var callObserverFuncAndRemoveObserver = function callObserverFuncAndRemoveObserver(func) {
+          if (SCRIPT_MAP[scriptURL]) {
+            var mapEntry = SCRIPT_MAP[scriptURL];
+            var observersMap = mapEntry.observers;
+
+            for (var obsKey in observersMap) {
+              if (func(observersMap[obsKey])) {
+                delete observersMap[obsKey];
+              }
+            }
+          }
+        };
+
+        if (callbackName && typeof window !== "undefined") {
+          window[callbackName] = function () {
+            return _this3.asyncScriptLoaderTriggerOnScriptLoaded();
+          };
+        }
+
+        script.onload = function () {
+          var mapEntry = SCRIPT_MAP[scriptURL];
+
+          if (mapEntry) {
+            mapEntry.loaded = true;
+            callObserverFuncAndRemoveObserver(function (observer) {
+              if (callbackName) {
+                return false;
+              }
+
+              observer(mapEntry);
+              return true;
+            });
+          }
+        };
+
+        script.onerror = function () {
+          var mapEntry = SCRIPT_MAP[scriptURL];
+
+          if (mapEntry) {
+            mapEntry.errored = true;
+            callObserverFuncAndRemoveObserver(function (observer) {
+              observer(mapEntry);
+              return true;
+            });
+          }
+        };
+
+        document.body.appendChild(script);
+      };
+
+      _proto.componentWillUnmount = function componentWillUnmount() {
+        // Remove tag script
+        var scriptURL = this.__scriptURL;
+
+        if (options.removeOnUnmount === true) {
+          var allScripts = document.getElementsByTagName("script");
+
+          for (var i = 0; i < allScripts.length; i += 1) {
+            if (allScripts[i].src.indexOf(scriptURL) > -1) {
+              if (allScripts[i].parentNode) {
+                allScripts[i].parentNode.removeChild(allScripts[i]);
+              }
+            }
+          }
+        } // Clean the observer entry
+
+
+        var mapEntry = SCRIPT_MAP[scriptURL];
+
+        if (mapEntry) {
+          delete mapEntry.observers[this.asyncScriptLoaderGetScriptLoaderID()];
+
+          if (options.removeOnUnmount === true) {
+            delete SCRIPT_MAP[scriptURL];
+          }
+        }
+      };
+
+      _proto.render = function render() {
+        var globalName = options.globalName; // remove asyncScriptOnLoad from childProps
+
+        var _this$props = this.props,
+            asyncScriptOnLoad = _this$props.asyncScriptOnLoad,
+            forwardedRef = _this$props.forwardedRef,
+            childProps = _objectWithoutPropertiesLoose(_this$props, ["asyncScriptOnLoad", "forwardedRef"]); // eslint-disable-line no-unused-vars
+
+
+        if (globalName && typeof window !== "undefined") {
+          childProps[globalName] = typeof window[globalName] !== "undefined" ? window[globalName] : undefined;
+        }
+
+        childProps.ref = forwardedRef;
+        return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(WrappedComponent, childProps);
+      };
+
+      return AsyncScriptLoader;
+    }(react__WEBPACK_IMPORTED_MODULE_0__.Component); // Note the second param "ref" provided by React.forwardRef.
+    // We can pass it along to AsyncScriptLoader as a regular prop, e.g. "forwardedRef"
+    // And it can then be attached to the Component.
+
+
+    var ForwardedComponent = (0,react__WEBPACK_IMPORTED_MODULE_0__.forwardRef)(function (props, ref) {
+      return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(AsyncScriptLoader, _extends({}, props, {
+        forwardedRef: ref
+      }));
+    });
+    ForwardedComponent.displayName = "AsyncScriptLoader(" + wrappedComponentName + ")";
+    ForwardedComponent.propTypes = {
+      asyncScriptOnLoad: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func)
+    };
+    return hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_2___default()(ForwardedComponent, WrappedComponent);
+  };
+}
 
 /***/ }),
 
@@ -52596,6 +53358,295 @@ if (false) {} else {
 
 /***/ }),
 
+/***/ "./node_modules/react-google-recaptcha/lib/esm/index.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/react-google-recaptcha/lib/esm/index.js ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
+/* harmony export */   "ReCAPTCHA": () => (/* reexport safe */ _recaptcha__WEBPACK_IMPORTED_MODULE_1__.default)
+/* harmony export */ });
+/* harmony import */ var _recaptcha_wrapper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./recaptcha-wrapper */ "./node_modules/react-google-recaptcha/lib/esm/recaptcha-wrapper.js");
+/* harmony import */ var _recaptcha__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./recaptcha */ "./node_modules/react-google-recaptcha/lib/esm/recaptcha.js");
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_recaptcha_wrapper__WEBPACK_IMPORTED_MODULE_0__.default);
+
+
+/***/ }),
+
+/***/ "./node_modules/react-google-recaptcha/lib/esm/recaptcha-wrapper.js":
+/*!**************************************************************************!*\
+  !*** ./node_modules/react-google-recaptcha/lib/esm/recaptcha-wrapper.js ***!
+  \**************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _recaptcha__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./recaptcha */ "./node_modules/react-google-recaptcha/lib/esm/recaptcha.js");
+/* harmony import */ var react_async_script__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-async-script */ "./node_modules/react-async-script/lib/esm/async-script-loader.js");
+
+
+var callbackName = "onloadcallback";
+var globalName = "grecaptcha";
+
+function getOptions() {
+  return typeof window !== "undefined" && window.recaptchaOptions || {};
+}
+
+function getURL() {
+  var dynamicOptions = getOptions();
+  var hostname = dynamicOptions.useRecaptchaNet ? "recaptcha.net" : "www.google.com";
+  return "https://" + hostname + "/recaptcha/api.js?onload=" + callbackName + "&render=explicit";
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,react_async_script__WEBPACK_IMPORTED_MODULE_1__.default)(getURL, {
+  callbackName: callbackName,
+  globalName: globalName
+})(_recaptcha__WEBPACK_IMPORTED_MODULE_0__.default));
+
+/***/ }),
+
+/***/ "./node_modules/react-google-recaptcha/lib/esm/recaptcha.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/react-google-recaptcha/lib/esm/recaptcha.js ***!
+  \******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ ReCAPTCHA)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inheritsLoose(subClass, superClass) { subClass.prototype = Object.create(superClass.prototype); subClass.prototype.constructor = subClass; subClass.__proto__ = superClass; }
+
+
+
+
+var ReCAPTCHA =
+/*#__PURE__*/
+function (_React$Component) {
+  _inheritsLoose(ReCAPTCHA, _React$Component);
+
+  function ReCAPTCHA() {
+    var _this;
+
+    _this = _React$Component.call(this) || this;
+    _this.handleExpired = _this.handleExpired.bind(_assertThisInitialized(_this));
+    _this.handleErrored = _this.handleErrored.bind(_assertThisInitialized(_this));
+    _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
+    _this.handleRecaptchaRef = _this.handleRecaptchaRef.bind(_assertThisInitialized(_this));
+    return _this;
+  }
+
+  var _proto = ReCAPTCHA.prototype;
+
+  _proto.getValue = function getValue() {
+    if (this.props.grecaptcha && this._widgetId !== undefined) {
+      return this.props.grecaptcha.getResponse(this._widgetId);
+    }
+
+    return null;
+  };
+
+  _proto.getWidgetId = function getWidgetId() {
+    if (this.props.grecaptcha && this._widgetId !== undefined) {
+      return this._widgetId;
+    }
+
+    return null;
+  };
+
+  _proto.execute = function execute() {
+    var grecaptcha = this.props.grecaptcha;
+
+    if (grecaptcha && this._widgetId !== undefined) {
+      return grecaptcha.execute(this._widgetId);
+    } else {
+      this._executeRequested = true;
+    }
+  };
+
+  _proto.executeAsync = function executeAsync() {
+    var _this2 = this;
+
+    return new Promise(function (resolve, reject) {
+      _this2.executionResolve = resolve;
+      _this2.executionReject = reject;
+
+      _this2.execute();
+    });
+  };
+
+  _proto.reset = function reset() {
+    if (this.props.grecaptcha && this._widgetId !== undefined) {
+      this.props.grecaptcha.reset(this._widgetId);
+    }
+  };
+
+  _proto.handleExpired = function handleExpired() {
+    if (this.props.onExpired) {
+      this.props.onExpired();
+    } else {
+      this.handleChange(null);
+    }
+  };
+
+  _proto.handleErrored = function handleErrored() {
+    if (this.props.onErrored) {
+      this.props.onErrored();
+    }
+
+    if (this.executionReject) {
+      this.executionReject();
+      delete this.executionResolve;
+      delete this.executionReject;
+    }
+  };
+
+  _proto.handleChange = function handleChange(token) {
+    if (this.props.onChange) {
+      this.props.onChange(token);
+    }
+
+    if (this.executionResolve) {
+      this.executionResolve(token);
+      delete this.executionReject;
+      delete this.executionResolve;
+    }
+  };
+
+  _proto.explicitRender = function explicitRender() {
+    if (this.props.grecaptcha && this.props.grecaptcha.render && this._widgetId === undefined) {
+      var wrapper = document.createElement("div");
+      this._widgetId = this.props.grecaptcha.render(wrapper, {
+        sitekey: this.props.sitekey,
+        callback: this.handleChange,
+        theme: this.props.theme,
+        type: this.props.type,
+        tabindex: this.props.tabindex,
+        "expired-callback": this.handleExpired,
+        "error-callback": this.handleErrored,
+        size: this.props.size,
+        stoken: this.props.stoken,
+        hl: this.props.hl,
+        badge: this.props.badge
+      });
+      this.captcha.appendChild(wrapper);
+    }
+
+    if (this._executeRequested && this.props.grecaptcha && this._widgetId !== undefined) {
+      this._executeRequested = false;
+      this.execute();
+    }
+  };
+
+  _proto.componentDidMount = function componentDidMount() {
+    this.explicitRender();
+  };
+
+  _proto.componentDidUpdate = function componentDidUpdate() {
+    this.explicitRender();
+  };
+
+  _proto.componentWillUnmount = function componentWillUnmount() {
+    if (this._widgetId !== undefined) {
+      this.delayOfCaptchaIframeRemoving();
+      this.reset();
+    }
+  };
+
+  _proto.delayOfCaptchaIframeRemoving = function delayOfCaptchaIframeRemoving() {
+    var temporaryNode = document.createElement("div");
+    document.body.appendChild(temporaryNode);
+    temporaryNode.style.display = "none"; // move of the recaptcha to a temporary node
+
+    while (this.captcha.firstChild) {
+      temporaryNode.appendChild(this.captcha.firstChild);
+    } // delete the temporary node after reset will be done
+
+
+    setTimeout(function () {
+      document.body.removeChild(temporaryNode);
+    }, 5000);
+  };
+
+  _proto.handleRecaptchaRef = function handleRecaptchaRef(elem) {
+    this.captcha = elem;
+  };
+
+  _proto.render = function render() {
+    // consume properties owned by the reCATPCHA, pass the rest to the div so the user can style it.
+
+    /* eslint-disable no-unused-vars */
+    var _this$props = this.props,
+        sitekey = _this$props.sitekey,
+        onChange = _this$props.onChange,
+        theme = _this$props.theme,
+        type = _this$props.type,
+        tabindex = _this$props.tabindex,
+        onExpired = _this$props.onExpired,
+        onErrored = _this$props.onErrored,
+        size = _this$props.size,
+        stoken = _this$props.stoken,
+        grecaptcha = _this$props.grecaptcha,
+        badge = _this$props.badge,
+        hl = _this$props.hl,
+        childProps = _objectWithoutPropertiesLoose(_this$props, ["sitekey", "onChange", "theme", "type", "tabindex", "onExpired", "onErrored", "size", "stoken", "grecaptcha", "badge", "hl"]);
+    /* eslint-enable no-unused-vars */
+
+
+    return react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", _extends({}, childProps, {
+      ref: this.handleRecaptchaRef
+    }));
+  };
+
+  return ReCAPTCHA;
+}(react__WEBPACK_IMPORTED_MODULE_0__.Component);
+
+
+ReCAPTCHA.displayName = "ReCAPTCHA";
+ReCAPTCHA.propTypes = {
+  sitekey: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
+  onChange: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func),
+  grecaptcha: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().object),
+  theme: prop_types__WEBPACK_IMPORTED_MODULE_1___default().oneOf(["dark", "light"]),
+  type: prop_types__WEBPACK_IMPORTED_MODULE_1___default().oneOf(["image", "audio"]),
+  tabindex: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().number),
+  onExpired: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func),
+  onErrored: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func),
+  size: prop_types__WEBPACK_IMPORTED_MODULE_1___default().oneOf(["compact", "normal", "invisible"]),
+  stoken: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
+  hl: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
+  badge: prop_types__WEBPACK_IMPORTED_MODULE_1___default().oneOf(["bottomright", "bottomleft", "inline"])
+};
+ReCAPTCHA.defaultProps = {
+  onChange: function onChange() {},
+  theme: "light",
+  type: "image",
+  tabindex: 0,
+  size: "normal",
+  badge: "bottomright"
+};
+
+/***/ }),
+
 /***/ "./node_modules/react-intersection-observer/react-intersection-observer.m.js":
 /*!***********************************************************************************!*\
   !*** ./node_modules/react-intersection-observer/react-intersection-observer.m.js ***!
@@ -55871,6 +56922,202 @@ if (true) {
 
 
 //# sourceMappingURL=react-router-dom.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/react-router-hash-link/dist/react-router-hash-link.esm.js":
+/*!********************************************************************************!*\
+  !*** ./node_modules/react-router-hash-link/dist/react-router-hash-link.esm.js ***!
+  \********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "HashLink": () => (/* binding */ HashLink),
+/* harmony export */   "NavHashLink": () => (/* binding */ NavHashLink),
+/* harmony export */   "genericHashLink": () => (/* binding */ genericHashLink)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+
+
+
+
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+***************************************************************************** */
+
+var __assign = function() {
+    __assign = Object.assign || function __assign(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+
+function __rest(s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
+                t[p[i]] = s[p[i]];
+        }
+    return t;
+}
+
+var hashFragment = '';
+var observer = null;
+var asyncTimerId = null;
+var scrollFunction = null;
+function reset() {
+    hashFragment = '';
+    if (observer !== null)
+        observer.disconnect();
+    if (asyncTimerId !== null) {
+        window.clearTimeout(asyncTimerId);
+        asyncTimerId = null;
+    }
+}
+function isInteractiveElement(element) {
+    var formTags = ['BUTTON', 'INPUT', 'SELECT', 'TEXTAREA'];
+    var linkTags = ['A', 'AREA'];
+    return ((formTags.includes(element.tagName) && !element.hasAttribute('disabled')) ||
+        (linkTags.includes(element.tagName) && element.hasAttribute('href')));
+}
+function getElAndScroll() {
+    var element = null;
+    if (hashFragment === '#') {
+        // use document.body instead of document.documentElement because of a bug in smoothscroll-polyfill in safari
+        // see https://github.com/iamdustan/smoothscroll/issues/138
+        // while smoothscroll-polyfill is not included, it is the recommended way to implement smoothscroll
+        // in browsers that don't natively support el.scrollIntoView({ behavior: 'smooth' })
+        element = document.body;
+    }
+    else {
+        // check for element with matching id before assume '#top' is the top of the document
+        // see https://html.spec.whatwg.org/multipage/browsing-the-web.html#target-element
+        var id = hashFragment.replace('#', '');
+        element = document.getElementById(id);
+        if (element === null && hashFragment === '#top') {
+            // see above comment for why document.body instead of document.documentElement
+            element = document.body;
+        }
+    }
+    if (element !== null) {
+        scrollFunction(element);
+        // update focus to where the page is scrolled to
+        // unfortunately this doesn't work in safari (desktop and iOS) when blur() is called
+        var originalTabIndex = element.getAttribute('tabindex');
+        if (originalTabIndex === null && !isInteractiveElement(element)) {
+            element.setAttribute('tabindex', -1);
+        }
+        element.focus({ preventScroll: true });
+        if (originalTabIndex === null && !isInteractiveElement(element)) {
+            // for some reason calling blur() in safari resets the focus region to where it was previously,
+            // if blur() is not called it works in safari, but then are stuck with default focus styles
+            // on an element that otherwise might never had focus styles applied, so not an option
+            element.blur();
+            element.removeAttribute('tabindex');
+        }
+        reset();
+        return true;
+    }
+    return false;
+}
+function hashLinkScroll(timeout) {
+    // Push onto callback queue so it runs after the DOM is updated
+    window.setTimeout(function () {
+        if (getElAndScroll() === false) {
+            if (observer === null) {
+                observer = new MutationObserver(getElAndScroll);
+            }
+            observer.observe(document, {
+                attributes: true,
+                childList: true,
+                subtree: true,
+            });
+            // if the element doesn't show up in specified timeout or 10 seconds, stop checking
+            asyncTimerId = window.setTimeout(function () {
+                reset();
+            }, timeout || 10000);
+        }
+    }, 0);
+}
+function genericHashLink(As) {
+    return react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(function (props, ref) {
+        var linkHash = '';
+        if (typeof props.to === 'string' && props.to.includes('#')) {
+            linkHash = "#" + props.to.split('#').slice(1).join('#');
+        }
+        else if (typeof props.to === 'object' &&
+            typeof props.to.hash === 'string') {
+            linkHash = props.to.hash;
+        }
+        var passDownProps = {};
+        if (As === react_router_dom__WEBPACK_IMPORTED_MODULE_2__.NavLink) {
+            passDownProps.isActive = function (match, location) {
+                return match && match.isExact && location.hash === linkHash;
+            };
+        }
+        function handleClick(e) {
+            reset();
+            hashFragment = props.elementId ? "#" + props.elementId : linkHash;
+            if (props.onClick)
+                props.onClick(e);
+            if (hashFragment !== '') {
+                scrollFunction =
+                    props.scroll ||
+                        (function (el) {
+                            return props.smooth
+                                ? el.scrollIntoView({ behavior: 'smooth' })
+                                : el.scrollIntoView();
+                        });
+                hashLinkScroll(props.timeout);
+            }
+        }
+        var filteredProps = __rest(props, ["scroll", "smooth", "timeout", "elementId"]);
+        return (react__WEBPACK_IMPORTED_MODULE_0__.createElement(As, __assign({}, passDownProps, filteredProps, { onClick: handleClick, ref: ref }), props.children));
+    });
+}
+var HashLink = genericHashLink(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link);
+var NavHashLink = genericHashLink(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.NavLink);
+if (true) {
+    HashLink.displayName = 'HashLink';
+    NavHashLink.displayName = 'NavHashLink';
+    var propTypes = {
+        onClick: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func),
+        children: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().node),
+        scroll: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func),
+        timeout: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().number),
+        elementId: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
+        to: prop_types__WEBPACK_IMPORTED_MODULE_1___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_1___default().string), (prop_types__WEBPACK_IMPORTED_MODULE_1___default().object)]),
+    };
+    HashLink.propTypes = propTypes;
+    NavHashLink.propTypes = propTypes;
+}
+
+
+//# sourceMappingURL=react-router-hash-link.esm.js.map
 
 
 /***/ }),
