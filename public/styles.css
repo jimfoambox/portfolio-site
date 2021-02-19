@@ -73,8 +73,8 @@ border: 1px solid white !important;
 background-color: #87107f !important;
 }
 
-@media screen and (max-width: 601px) {
+/* @media screen and (max-width: 601px) {
     h1 {
-    font-size: 5rem;
+    font-size: 5rem !important;
     }
-}
+} */
