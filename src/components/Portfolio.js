@@ -79,7 +79,7 @@ import { InView } from 'react-intersection-observer'
                                     <AnimatedCard style={{ width: '18rem', margin: '20px', ...props  }}>
                                         <Row style={{ justifyContent: 'center' }}>
                                             <a href={"https://fallen-planet.herokuapp.com/"} target={'_blank'}>
-                                                <Card.Img variant="top" src="/assets/fallenplanetlogo600.png" style={{ width: 286 }} />
+                                                <Card.Img variant="top" src="/assets/fallenPlanetlogo600.png" style={{ width: 286 }} />
                                             </a>
                                         </Row>
                                         <Card.Body>
