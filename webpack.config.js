@@ -1,22 +1,26 @@
 module.exports = {
+  entry: './src/index.js', 
   mode: 'development',
-  entry: ['babel-polyfill', './src/index.js'],
   output: {
-    path: __dirname,
+    path: __dirname, 
     filename: './public/bundle.js'
   },
-  context: __dirname,
   devtool: 'source-map',
   module: {
     rules: [
       {
-        test: /jsx?$/,
+        test: /\.js$/,
         exclude: /node_modules/,
-        use: 'babel-loader'
+        use: {
+          loader: 'babel-loader'
+        }
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        use: [
+          'style-loader',
+          'css-loader',
+        ]
       }
     ]
   }
