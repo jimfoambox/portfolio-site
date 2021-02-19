@@ -1,17 +1,15 @@
-const path = require('path')
-
 module.exports = {
-   entry: './src/index.js', 
-    mode: 'development',
-    output: {
-      path: __dirname, 
-      filename: './public/bundle.js'
+  entry: './src/index.js', 
+  mode: 'development',
+  output: {
+    path: __dirname, 
+    filename: './public/bundle.js'
   },
+  devtool: 'source-map',
   module: {
     rules: [
       {
-        test: /\.(jsx|js)$/,
-        include: path.resolve(__dirname, 'src'),
+        test: /\.js$/,
         exclude: /node_modules/,
         use: [{
           loader: 'babel-loader',
@@ -23,7 +21,7 @@ module.exports = {
               '@babel/preset-react'
             ]
           }
-        }]
+      }]
       },
       {
         test: /\.css$/,
@@ -35,31 +33,3 @@ module.exports = {
     ]
   }
 }
-
-// module.exports = {
-//   entry: './src/index.js', 
-//   mode: 'development',
-//   output: {
-//     path: __dirname, 
-//     filename: './public/bundle.js'
-//   },
-//   devtool: 'source-map',
-//   module: {
-//     rules: [
-//       {
-//         test: /\.js$/,
-//         exclude: /node_modules/,
-//         use: {
-//           loader: 'babel-loader'
-//         }
-//       },
-//       {
-//         test: /\.css$/,
-//         use: [
-//           'style-loader',
-//           'css-loader',
-//         ]
-//       }
-//     ]
-//   }
-// }
