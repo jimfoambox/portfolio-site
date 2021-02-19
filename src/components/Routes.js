@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import { HashLink as Link} from 'react-router-hash-link'
+import { Link, animateScroll as scroll } from "react-scroll"
 import { Nav, Navbar, NavItem } from 'react-bootstrap'
 import Home from './Home'
 import Slideshow from './Slideshow';
@@ -16,16 +16,16 @@ const Routes = () => {
                         </Nav>
                         <Nav className='ml-auto'>
                             <NavItem eventkey={1} href="/">
-                                <Nav.Link as={Link} className="navLink" to="/">Home</Nav.Link>
+                                <Nav.Link as={Link} className="navLink" spy={true} smooth={true} offset={-500} duration={500} to="home">Home</Nav.Link>
                             </NavItem>
                             <NavItem eventkey={2} href="/">
-                                <Nav.Link as={Link} className="navLink" to="/#portfolio">Portfolio</Nav.Link>
+                                <Nav.Link as={Link} className="navLink" spy={true} smooth={true} offset={-70} duration={500} to="portfolio">Portfolio</Nav.Link>
                             </NavItem>
                             <NavItem eventkey={3} href="/">
-                                <Nav.Link as={Link} className="navLink" to="/#aboutme">About Me</Nav.Link>
+                                <Nav.Link as={Link} className="navLink" spy={true} smooth={true} offset={-70} duration={500} to="aboutme">About Me</Nav.Link>
                             </NavItem>
                             <NavItem eventkey={4} href="/">
-                                <Nav.Link as={Link} className="navLink" to="/#contact">Contact</Nav.Link>
+                                <Nav.Link as={Link} className="navLink" spy={true} smooth={true} offset={50} duration={500} to="contact">Contact</Nav.Link>
                             </NavItem>
                         </Nav>
                     </Navbar>

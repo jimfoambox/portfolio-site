@@ -37,6 +37,7 @@
 
 .navLink:hover {
     color: darkgrey !important;
+    cursor: pointer !important;
 }
 
 .introText {
@@ -52,3 +53,22 @@
     align-self: center;
     line-height: 1.2;
 }
+
+.outlineButton {
+    border: 1px solid white;
+    background-color:transparent;
+    color: white;
+    padding: 10px 14px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .outlineButton:hover {
+    border: 1px solid white !important;
+    background-color: #87107f !important;
+  }
+
+  .outlineButton:focus {
+    border: 1px solid white !important;
+    background-color: #87107f !important;
+  }

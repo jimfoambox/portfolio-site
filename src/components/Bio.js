@@ -48,21 +48,21 @@ export default class Bio extends React.Component {
                                         )}
                                     </Spring>
                                     <Row className="justify-content-center">
-                                    <Spring to={{ transform: isVisible ? 'translate3d(0,0px,0)': 'translate3d(-400px,0,0)', opacity: isVisible ? 1 : 0 }} delay={200} config={config.gentle}>
+                                    <Spring to={{ transform: isVisible ? 'translate3d(0,0px,0)': 'translate3d(0,-40px,0)', opacity: isVisible ? 1 : 0 }} delay={500} config={config.gentle}>
                                             {props => (
                                                 <a href={"https://github.com/jimfoambox"} target={'_blank'}>
                                                     <img style={{width: 100, margin: 14, ...props}} src='/assets/githublogo500.png' />
                                                 </a>
                                             )}
                                         </Spring>
-                                        <Spring to={{ transform: isVisible ? 'translate3d(0,0px,0)': 'translate3d(400px,0,0)', opacity: isVisible ? 1 : 0 }} delay={150} config={config.gentle}>
+                                        <Spring to={{ transform: isVisible ? 'translate3d(0,0px,0)': 'translate3d(0,-40px,0)', opacity: isVisible ? 1 : 0 }} delay={700} config={config.gentle}>
                                             {props => (
                                                 <a href={"https://www.linkedin.com/in/james-gill-a7434a35/"} target={'_blank'}>
                                                     <img style={{width: 100, margin: 27, ...props}} src='/assets/linkedinlogo500.png' />
                                                 </a>
                                             )}
                                         </Spring>
-                                        <Spring to={{ transform: isVisible ? 'translate3d(0,0px,0)': 'translate3d(400px,0,0)', opacity: isVisible ? 1 : 0 }} delay={400} config={config.gentle}>
+                                        <Spring to={{ transform: isVisible ? 'translate3d(0,0px,0)': 'translate3d(0,-40px,0)', opacity: isVisible ? 1 : 0 }} delay={900} config={config.gentle}>
                                             {props => (
                                                 <a href={"https://jamesgill2019.medium.com/"} target={'_blank'}>
                                                     <img style={{width: 100, margin: 14, ...props}} src='/assets/mediumlogo500.png' />
