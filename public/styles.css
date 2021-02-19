@@ -61,14 +61,20 @@
     padding: 10px 14px;
     font-size: 16px;
     cursor: pointer;
-  }
+}
 
-  .outlineButton:hover {
-    border: 1px solid white !important;
-    background-color: #87107f !important;
-  }
+.outlineButton:hover {
+border: 1px solid white !important;
+background-color: #87107f !important;
+}
 
-  .outlineButton:focus {
-    border: 1px solid white !important;
-    background-color: #87107f !important;
-  }
+.outlineButton:focus {
+border: 1px solid white !important;
+background-color: #87107f !important;
+}
+
+@media screen and (max-width: 601px) {
+    h1 {
+    font-size: 5rem;
+    }
+}
