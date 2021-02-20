@@ -38,7 +38,7 @@ export default class Bio extends React.Component {
                 </div>
                 <Container>
                         <Row className="justify-content-center">
-                            <InView tag='div' onChange={this.handleView} threshold={.5} triggerOnce={true}>
+                            {/* <InView tag='div' onChange={this.handleView} threshold={.5} triggerOnce={true}> */}
                                 <Col xs={12}>
                                     <Spring to={{ transform: isVisible ? 'translate3d(0,0px,0)': 'translate3d(0,-40px,0)', opacity: isVisible ? 1 : 0 }} delay={300} config={config.gentle}>
                                         {props => (
@@ -86,7 +86,7 @@ export default class Bio extends React.Component {
                                         )}
                                     </Spring>
                                 </Col>
-                            </InView>
+                            {/* </InView> */}
                             <InView tag='div' onChange={this.secondHandleView} threshold={.3} triggerOnce={true}>
                                 <Row>
                                     <Col md={4} xs={12}>

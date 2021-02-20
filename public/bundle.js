@@ -251,10 +251,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Row.js");
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Container.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Col.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Col.js");
 /* harmony import */ var react_spring__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-spring */ "./node_modules/react-spring/web.js");
-/* harmony import */ var react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-spring/renderprops */ "./node_modules/react-spring/renderprops.js");
-/* harmony import */ var react_intersection_observer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-intersection-observer */ "./node_modules/react-intersection-observer/react-intersection-observer.m.js");
+/* harmony import */ var react_spring_renderprops__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-spring/renderprops */ "./node_modules/react-spring/renderprops.js");
+/* harmony import */ var react_intersection_observer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-intersection-observer */ "./node_modules/react-intersection-observer/react-intersection-observer.m.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -342,20 +342,15 @@ var Bio = /*#__PURE__*/function (_React$Component) {
         }
       }, "About Me")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__.default, {
         className: "justify-content-center"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_intersection_observer__WEBPACK_IMPORTED_MODULE_4__.InView, {
-        tag: "div",
-        onChange: this.handleView,
-        threshold: .5,
-        triggerOnce: true
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default, {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__.default, {
         xs: 12
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.Spring, {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_5__.Spring, {
         to: {
           transform: isVisible ? 'translate3d(0,0px,0)' : 'translate3d(0,-40px,0)',
           opacity: isVisible ? 1 : 0
         },
         delay: 300,
-        config: react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.config.gentle
+        config: react_spring_renderprops__WEBPACK_IMPORTED_MODULE_5__.config.gentle
       }, function (props) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(AnimatedRow, {
           className: "justify-content-center",
@@ -368,13 +363,13 @@ var Bio = /*#__PURE__*/function (_React$Component) {
         }));
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__.default, {
         className: "justify-content-center"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.Spring, {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_5__.Spring, {
         to: {
           transform: isVisible ? 'translate3d(0,0px,0)' : 'translate3d(0,-40px,0)',
           opacity: isVisible ? 1 : 0
         },
         delay: 500,
-        config: react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.config.gentle
+        config: react_spring_renderprops__WEBPACK_IMPORTED_MODULE_5__.config.gentle
       }, function (props) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
           href: "https://github.com/jimfoambox",
@@ -386,13 +381,13 @@ var Bio = /*#__PURE__*/function (_React$Component) {
           }, props),
           src: "/assets/githublogo500.png"
         }));
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.Spring, {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_5__.Spring, {
         to: {
           transform: isVisible ? 'translate3d(0,0px,0)' : 'translate3d(0,-40px,0)',
           opacity: isVisible ? 1 : 0
         },
         delay: 700,
-        config: react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.config.gentle
+        config: react_spring_renderprops__WEBPACK_IMPORTED_MODULE_5__.config.gentle
       }, function (props) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
           href: "https://www.linkedin.com/in/james-gill-a7434a35/",
@@ -404,13 +399,13 @@ var Bio = /*#__PURE__*/function (_React$Component) {
           }, props),
           src: "/assets/linkedinlogo500.png"
         }));
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.Spring, {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_5__.Spring, {
         to: {
           transform: isVisible ? 'translate3d(0,0px,0)' : 'translate3d(0,-40px,0)',
           opacity: isVisible ? 1 : 0
         },
         delay: 900,
-        config: react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.config.gentle
+        config: react_spring_renderprops__WEBPACK_IMPORTED_MODULE_5__.config.gentle
       }, function (props) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
           href: "https://jamesgill2019.medium.com/",
@@ -422,174 +417,174 @@ var Bio = /*#__PURE__*/function (_React$Component) {
           }, props),
           src: "/assets/mediumlogo500.png"
         }));
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default, {
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__.default, {
         xs: 12
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.Spring, {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_5__.Spring, {
         to: {
           transform: isVisible ? 'translate3d(0,-40px,0)' : 'translate3d(0,0px,0)',
           opacity: isVisible ? 1 : 0
         },
         delay: 150,
-        config: react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.config.gentle
+        config: react_spring_renderprops__WEBPACK_IMPORTED_MODULE_5__.config.gentle
       }, function (props) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
           style: _objectSpread({
             margin: 50
           }, props)
         }, " My name is James Gill, and I am a full stack developer based out of Jersey City, New Jersey. Prior to my move to the world of software development, I was an audio engineer for 10 years, involved primarily in audio recording, music production, and sound + video system installation.  I first caught the coding bug during an internship right out of college, where I helped design and edit web pages and newsletters.  The more I delved into software, the more I felt myself being pulled into the world of tech.  Eventually it became clear the writing was on the wall, and I decided to make the career change into the world of professional software development.  I am a graduate and teaching fellow at FullStack Academy and have worked ever since to perfect the necessary skills to succeed and be a long-term team asset in the software industry.");
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_intersection_observer__WEBPACK_IMPORTED_MODULE_4__.InView, {
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_intersection_observer__WEBPACK_IMPORTED_MODULE_6__.InView, {
         tag: "div",
         onChange: this.secondHandleView,
         threshold: .3,
         triggerOnce: true
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default, {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__.default, {
         md: 4,
         xs: 12
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.Spring, {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_5__.Spring, {
         to: {
           transform: isVisibleTwo ? 'translate3d(0,0px,0)' : 'translate3d(0,-40px,0)',
           opacity: isVisibleTwo ? 1 : 0
         },
         delay: 200,
-        config: react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.config.gentle
+        config: react_spring_renderprops__WEBPACK_IMPORTED_MODULE_5__.config.gentle
       }, function (props) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(AnimatedRow, {
           className: "justify-content-center",
           style: props
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", null, "Proficient"));
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.Spring, {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_5__.Spring, {
         to: {
           transform: isVisibleTwo ? 'translate3d(0,0px,0)' : 'translate3d(0,-40px,0)',
           opacity: isVisibleTwo ? 1 : 0
         },
         delay: 300,
-        config: react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.config.gentle
+        config: react_spring_renderprops__WEBPACK_IMPORTED_MODULE_5__.config.gentle
       }, function (props) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(AnimatedRow, {
           className: "justify-content-center",
           style: props
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Javascript | HTML | CSS"));
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.Spring, {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_5__.Spring, {
         to: {
           transform: isVisibleTwo ? 'translate3d(0,0px,0)' : 'translate3d(0,-40px,0)',
           opacity: isVisibleTwo ? 1 : 0
         },
         delay: 400,
-        config: react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.config.gentle
+        config: react_spring_renderprops__WEBPACK_IMPORTED_MODULE_5__.config.gentle
       }, function (props) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(AnimatedRow, {
           className: "justify-content-center",
           style: props
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "React | Redux | Git/Github"));
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.Spring, {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_5__.Spring, {
         to: {
           transform: isVisibleTwo ? 'translate3d(0,0px,0)' : 'translate3d(0,-40px,0)',
           opacity: isVisibleTwo ? 1 : 0
         },
         delay: 500,
-        config: react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.config.gentle
+        config: react_spring_renderprops__WEBPACK_IMPORTED_MODULE_5__.config.gentle
       }, function (props) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(AnimatedRow, {
           className: "justify-content-center",
           style: props
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Node.js | Express | Sequelize"));
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default, {
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__.default, {
         md: 4,
         xs: 12
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.Spring, {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_5__.Spring, {
         to: {
           transform: isVisibleTwo ? 'translate3d(0,0px,0)' : 'translate3d(0,-40px,0)',
           opacity: isVisibleTwo ? 1 : 0
         },
         delay: 200,
-        config: react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.config.gentle
+        config: react_spring_renderprops__WEBPACK_IMPORTED_MODULE_5__.config.gentle
       }, function (props) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(AnimatedRow, {
           className: "justify-content-center",
           style: props
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", null, "Knowledgable"));
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.Spring, {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_5__.Spring, {
         to: {
           transform: isVisibleTwo ? 'translate3d(0,0px,0)' : 'translate3d(0,-40px,0)',
           opacity: isVisibleTwo ? 1 : 0
         },
         delay: 300,
-        config: react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.config.gentle
+        config: react_spring_renderprops__WEBPACK_IMPORTED_MODULE_5__.config.gentle
       }, function (props) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(AnimatedRow, {
           className: "justify-content-center",
           style: props
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "React-Native | PostgresSQL | Webpack"));
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.Spring, {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_5__.Spring, {
         to: {
           transform: isVisibleTwo ? 'translate3d(0,0px,0)' : 'translate3d(0,-40px,0)',
           opacity: isVisibleTwo ? 1 : 0
         },
         delay: 400,
-        config: react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.config.gentle
+        config: react_spring_renderprops__WEBPACK_IMPORTED_MODULE_5__.config.gentle
       }, function (props) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(AnimatedRow, {
           className: "justify-content-center",
           style: props
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Mocha | Chai | Google Firebase"));
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.Spring, {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_5__.Spring, {
         to: {
           transform: isVisibleTwo ? 'translate3d(0,0px,0)' : 'translate3d(0,-40px,0)',
           opacity: isVisibleTwo ? 1 : 0
         },
         delay: 500,
-        config: react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.config.gentle
+        config: react_spring_renderprops__WEBPACK_IMPORTED_MODULE_5__.config.gentle
       }, function (props) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(AnimatedRow, {
           className: "justify-content-center",
           style: props
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Google Cloud APIs | Heroku"));
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default, {
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__.default, {
         md: 4,
         xs: 12
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.Spring, {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_5__.Spring, {
         to: {
           transform: isVisibleTwo ? 'translate3d(0,0px,0)' : 'translate3d(0,-40px,0)',
           opacity: isVisibleTwo ? 1 : 0
         },
         delay: 200,
-        config: react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.config.gentle
+        config: react_spring_renderprops__WEBPACK_IMPORTED_MODULE_5__.config.gentle
       }, function (props) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(AnimatedRow, {
           className: "justify-content-center",
           style: props
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", null, "Additional Skills"));
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.Spring, {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_5__.Spring, {
         to: {
           transform: isVisibleTwo ? 'translate3d(0,0px,0)' : 'translate3d(0,-40px,0)',
           opacity: isVisibleTwo ? 1 : 0
         },
         delay: 300,
-        config: react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.config.gentle
+        config: react_spring_renderprops__WEBPACK_IMPORTED_MODULE_5__.config.gentle
       }, function (props) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(AnimatedRow, {
           className: "justify-content-center",
           style: props
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Wordpress | Shopify | React-Bootstrap"));
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.Spring, {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_5__.Spring, {
         to: {
           transform: isVisibleTwo ? 'translate3d(0,0px,0)' : 'translate3d(0,-40px,0)',
           opacity: isVisibleTwo ? 1 : 0
         },
         delay: 400,
-        config: react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.config.gentle
+        config: react_spring_renderprops__WEBPACK_IMPORTED_MODULE_5__.config.gentle
       }, function (props) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(AnimatedRow, {
           className: "justify-content-center",
           style: props
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Testem | React Spring"));
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.Spring, {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_5__.Spring, {
         to: {
           transform: isVisibleTwo ? 'translate3d(0,0px,0)' : 'translate3d(0,-40px,0)',
           opacity: isVisibleTwo ? 1 : 0
         },
         delay: 500,
-        config: react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.config.gentle
+        config: react_spring_renderprops__WEBPACK_IMPORTED_MODULE_5__.config.gentle
       }, function (props) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(AnimatedRow, {
           className: "justify-content-center",
