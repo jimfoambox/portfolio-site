@@ -362,8 +362,8 @@ var Bio = /*#__PURE__*/function (_React$Component) {
           style: props
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
           style: {
-            width: '200',
-            height: '200'
+            width: '200px',
+            height: '200px'
           },
           src: "/assets/profilepiccircle400.png"
         }));
