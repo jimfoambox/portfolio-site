@@ -345,6 +345,8 @@ var Bio = /*#__PURE__*/function (_React$Component) {
         onChange: this.handleView,
         threshold: .5,
         triggerOnce: true
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__.default, {
+        xs: 12
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.Spring, {
         to: {
           transform: isVisible ? 'translate3d(0,0px,0)' : 'translate3d(0,-40px,0)',
@@ -362,7 +364,7 @@ var Bio = /*#__PURE__*/function (_React$Component) {
           },
           src: "/assets/profilepiccircle1200.png"
         }));
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__.default, {
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__.default, {
         className: "justify-content-center"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.Spring, {
         to: {
@@ -418,7 +420,9 @@ var Bio = /*#__PURE__*/function (_React$Component) {
           }, props),
           src: "/assets/mediumlogo500.png"
         }));
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.Spring, {
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__.default, {
+        xs: 12
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.Spring, {
         to: {
           transform: isVisible ? 'translate3d(0,-40px,0)' : 'translate3d(0,0px,0)',
           opacity: isVisible ? 1 : 0
@@ -431,14 +435,17 @@ var Bio = /*#__PURE__*/function (_React$Component) {
             margin: 50
           }, props)
         }, " My name is James Gill, and I am a full stack developer based out of Jersey City, New Jersey. Prior to my move to the world of software development, I was an audio engineer for 10 years, involved primarily in audio recording, music production, and sound + video system installation.  I first caught the coding bug during an internship right out of college, where I helped design and edit web pages and newsletters.  The more I delved into software, the more I felt myself being pulled into the world of tech.  Eventually it became clear the writing was on the wall, and I decided to make the career change into the world of professional software development.  I am a graduate and teaching fellow at FullStack Academy and have worked ever since to perfect the necessary skills to succeed and be a long-term team asset in the software industry.");
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_intersection_observer__WEBPACK_IMPORTED_MODULE_5__.InView, {
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_intersection_observer__WEBPACK_IMPORTED_MODULE_5__.InView, {
         tag: "div",
         onChange: this.secondHandleView,
         threshold: .3,
         triggerOnce: true
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__.default, {
         className: "justify-content-center"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.Spring, {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__.default, {
+        md: 4,
+        xs: 12
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.Spring, {
         to: {
           transform: isVisibleTwo ? 'translate3d(0,0px,0)' : 'translate3d(0,-40px,0)',
           opacity: isVisibleTwo ? 1 : 0
@@ -486,7 +493,10 @@ var Bio = /*#__PURE__*/function (_React$Component) {
           className: "justify-content-center",
           style: props
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Node.js | Express | Sequelize"));
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.Spring, {
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__.default, {
+        md: 4,
+        xs: 12
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.Spring, {
         to: {
           transform: isVisibleTwo ? 'translate3d(0,0px,0)' : 'translate3d(0,-40px,0)',
           opacity: isVisibleTwo ? 1 : 0
@@ -534,7 +544,10 @@ var Bio = /*#__PURE__*/function (_React$Component) {
           className: "justify-content-center",
           style: props
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Google Cloud APIs | Heroku"));
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.Spring, {
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__.default, {
+        md: 4,
+        xs: 12
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.Spring, {
         to: {
           transform: isVisibleTwo ? 'translate3d(0,0px,0)' : 'translate3d(0,-40px,0)',
           opacity: isVisibleTwo ? 1 : 0
@@ -607,13 +620,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Row.js");
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Container.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Col.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Col.js");
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Form.js");
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Button.js");
 /* harmony import */ var emailjs_com__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! emailjs-com */ "./node_modules/emailjs-com/source/index.js");
 /* harmony import */ var react_google_recaptcha__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-google-recaptcha */ "./node_modules/react-google-recaptcha/lib/esm/index.js");
 /* harmony import */ var react_spring_renderprops__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-spring/renderprops */ "./node_modules/react-spring/renderprops.js");
-/* harmony import */ var react_intersection_observer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-intersection-observer */ "./node_modules/react-intersection-observer/react-intersection-observer.m.js");
+/* harmony import */ var react_intersection_observer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-intersection-observer */ "./node_modules/react-intersection-observer/react-intersection-observer.m.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -743,6 +756,8 @@ var Contact = /*#__PURE__*/function (_React$Component) {
           style: {
             padding: 80
           }
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__.default, {
+          xs: 12
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_3__.Spring, {
           from: {
             transform: 'translate3d(0,-40px,0)',
@@ -761,7 +776,7 @@ var Contact = /*#__PURE__*/function (_React$Component) {
               textAlign: 'center'
             }, props)
           }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Message Sent"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h6", null, "I will respond to you as quickly as possible!"));
-        }));
+        })))));
       }
 
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -779,12 +794,17 @@ var Contact = /*#__PURE__*/function (_React$Component) {
         style: {
           textAlign: 'center'
         }
-      }, "Reach out to me any time: I'd love to hear from you!")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_intersection_observer__WEBPACK_IMPORTED_MODULE_6__.InView, {
+      }, "Reach out to me any time: I'd love to hear from you!")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_intersection_observer__WEBPACK_IMPORTED_MODULE_7__.InView, {
         tag: "div",
         onChange: this.handleView,
         threshold: .5,
         triggerOnce: true
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__.default, {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__.default, {
+        className: "justify-content-center"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__.default, {
+        md: 4,
+        xs: 12
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__.default, {
         onSubmit: this.onSubmit
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__.default.Group, {
         controlId: "exampleForm.ControlInput1"
@@ -910,7 +930,7 @@ var Contact = /*#__PURE__*/function (_React$Component) {
           variant: "primary",
           type: "submit"
         }, "Submit"));
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__.default, null)))));
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__.default, null)))));
     }
   }]);
 
@@ -1127,9 +1147,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Card.js");
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Container.js");
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Row.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Button.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Col.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Button.js");
 /* harmony import */ var react_spring__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-spring */ "./node_modules/react-spring/web.js");
-/* harmony import */ var react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-spring/renderprops */ "./node_modules/react-spring/renderprops.js");
+/* harmony import */ var react_spring_renderprops__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-spring/renderprops */ "./node_modules/react-spring/renderprops.js");
 /* harmony import */ var react_intersection_observer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-intersection-observer */ "./node_modules/react-intersection-observer/react-intersection-observer.m.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -1214,13 +1235,16 @@ var Portfolio = /*#__PURE__*/function (_React$Component) {
         style: {
           justifyContent: 'center'
         }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.Spring, {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__.default, {
+        xs: 12,
+        md: 4
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_7__.Spring, {
         to: {
           transform: isVisible ? 'translate3d(0,0px,0)' : 'translate3d(0,-40px,0)',
           opacity: isVisible ? 1 : 0
         },
         delay: 150,
-        config: react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.config.gentle
+        config: react_spring_renderprops__WEBPACK_IMPORTED_MODULE_7__.config.gentle
       }, function (props) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(AnimatedCard, {
           style: _objectSpread({
@@ -1243,16 +1267,19 @@ var Portfolio = /*#__PURE__*/function (_React$Component) {
         }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__.default.Body, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__.default.Title, null, "Parallel"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__.default.Text, null, "A crowdsourced landmark hotspot IOS mobile app built with React Native and using Mapbox GL."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
           href: "https://youtu.be/Jgi-ngC3Yl0",
           target: '_blank'
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__.default, {
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__.default, {
           variant: "primary"
         }, "See Demo"))));
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.Spring, {
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__.default, {
+        xs: 12,
+        md: 4
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_7__.Spring, {
         to: {
           transform: isVisible ? 'translate3d(0,0px,0)' : 'translate3d(0,-40px,0)',
           opacity: isVisible ? 1 : 0
         },
         delay: 300,
-        config: react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.config.gentle
+        config: react_spring_renderprops__WEBPACK_IMPORTED_MODULE_7__.config.gentle
       }, function (props) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(AnimatedCard, {
           style: _objectSpread({
@@ -1275,16 +1302,19 @@ var Portfolio = /*#__PURE__*/function (_React$Component) {
         }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__.default.Body, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__.default.Title, null, "Inspire!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__.default.Text, null, "An IOS mobile app built in Swift that gives you a famous inspiration quote based on your mood and the day of the week."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
           href: "https://www.youtube.com/watch?v=56KK8hrHAII&feature=youtu.be",
           target: '_blank'
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__.default, {
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__.default, {
           variant: "primary"
         }, "See Demo"))));
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.Spring, {
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__.default, {
+        xs: 12,
+        md: 4
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_7__.Spring, {
         to: {
           transform: isVisible ? 'translate3d(0,0px,0)' : 'translate3d(0,-40px,0)',
           opacity: isVisible ? 1 : 0
         },
         delay: 450,
-        config: react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.config.gentle
+        config: react_spring_renderprops__WEBPACK_IMPORTED_MODULE_7__.config.gentle
       }, function (props) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(AnimatedCard, {
           style: _objectSpread({
@@ -1300,17 +1330,17 @@ var Portfolio = /*#__PURE__*/function (_React$Component) {
           target: '_blank'
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__.default.Img, {
           variant: "top",
-          src: "/assets/fallenplanetlogo600.png",
+          src: "/assets/fallenPlanetlogo600.png",
           style: {
             width: 286
           }
-        }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__.default.Body, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__.default.Title, null, "Fallen Planet"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__.default.Text, null, "A 2D platform sci-fi game built in Javascript with the mighty Phaser 3 library."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+        }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__.default.Body, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__.default.Title, null, "Fallen Planet"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__.default.Text, null, "A 2D platform sci-fi game built in Javascript with the Phaser 3 library and launched in browser inside of a React frontend."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
           href: "https://fallen-planet.herokuapp.com/",
           target: '_blank'
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__.default, {
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__.default, {
           variant: "primary"
         }, "Play The Game"))));
-      })))));
+      }))))));
     }
   }]);
 
@@ -1350,15 +1380,26 @@ __webpack_require__.r(__webpack_exports__);
 
 var Routes = function Routes() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.BrowserRouter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Slideshow__WEBPACK_IMPORTED_MODULE_3__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default, {
+    collapseOnSelect: true,
     bg: "dark",
+    variant: "dark",
     expand: "lg",
-    sticky: "top"
+    sticky: "top",
+    style: {
+      width: '100vw'
+    }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     src: "/assets/jamesgilllogo.png",
     style: {
       height: 40
     }
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__.default, {
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default.Toggle, {
+    "aria-controls": "responsive-navbar-nav",
+    variant: "dark",
+    bg: "dark"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default.Collapse, {
+    id: "responsive-navbar-nav"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__.default, {
     className: "ml-auto"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__.default, {
     eventkey: 1,
@@ -1379,7 +1420,7 @@ var Routes = function Routes() {
     className: "navLink",
     spy: true,
     smooth: true,
-    offset: -70,
+    offset: 0,
     duration: 500,
     to: "portfolio"
   }, "Portfolio")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__.default, {
@@ -1390,7 +1431,7 @@ var Routes = function Routes() {
     className: "navLink",
     spy: true,
     smooth: true,
-    offset: -70,
+    offset: 0,
     duration: 500,
     to: "aboutme"
   }, "About Me")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__.default, {
@@ -1404,7 +1445,7 @@ var Routes = function Routes() {
     offset: 50,
     duration: 500,
     to: "contact"
-  }, "Contact")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Switch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
+  }, "Contact"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Switch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
     path: "/",
     component: _Home__WEBPACK_IMPORTED_MODULE_2__.default
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("footer", {
@@ -1647,7 +1688,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".homeBody {\n    display: flex;\n    flex-direction: column;\n}\n\n.homeComponents {\n    padding: 50px;\n}\n\n.sliderbg {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh; \n    background-size: cover;\n    background-position: center;\n    will-change: opacity;\n  }\n\n.sliderDiv {\n    display: flex;\n    justify-content: center;\n    align-content: center;\n    position: relative;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh; \n    background-size: cover;\n    background-position: center;\n}\n\n.navLink {\n    color: #fff !important;\n}\n\n.navLink:hover {\n    color: darkgrey !important;\n    cursor: pointer !important;\n}\n\n.introText {\n    position: absolute;\n    top: 40%;\n    left: 0;\n    width: 100vw;\n    height: 100vh; \n    text-align: center;\n    color: #fff;\n    font-weight: 500;\n    font-family: -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,\"Noto Sans\",\"Liberation Sans\",sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\";;\n    align-self: center;\n    line-height: 1.2;\n}\n\n.outlineButton {\n    border: 1px solid white;\n    background-color:transparent;\n    color: white;\n    padding: 10px 14px;\n    font-size: 16px;\n    cursor: pointer;\n  }\n\n  .outlineButton:hover {\n    border: 1px solid white !important;\n    background-color: #87107f !important;\n  }\n\n  .outlineButton:focus {\n    border: 1px solid white !important;\n    background-color: #87107f !important;\n  }", "",{"version":3,"sources":["webpack://./public/styles.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,sBAAsB;AAC1B;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,kBAAkB;IAClB,MAAM;IACN,OAAO;IACP,YAAY;IACZ,aAAa;IACb,sBAAsB;IACtB,2BAA2B;IAC3B,oBAAoB;EACtB;;AAEF;IACI,aAAa;IACb,uBAAuB;IACvB,qBAAqB;IACrB,kBAAkB;IAClB,MAAM;IACN,OAAO;IACP,YAAY;IACZ,aAAa;IACb,sBAAsB;IACtB,2BAA2B;AAC/B;;AAEA;IACI,sBAAsB;AAC1B;;AAEA;IACI,0BAA0B;IAC1B,0BAA0B;AAC9B;;AAEA;IACI,kBAAkB;IAClB,QAAQ;IACR,OAAO;IACP,YAAY;IACZ,aAAa;IACb,kBAAkB;IAClB,WAAW;IACX,gBAAgB;IAChB,yMAAyM;IACzM,kBAAkB;IAClB,gBAAgB;AACpB;;AAEA;IACI,uBAAuB;IACvB,4BAA4B;IAC5B,YAAY;IACZ,kBAAkB;IAClB,eAAe;IACf,eAAe;EACjB;;EAEA;IACE,kCAAkC;IAClC,oCAAoC;EACtC;;EAEA;IACE,kCAAkC;IAClC,oCAAoC;EACtC","sourcesContent":[".homeBody {\n    display: flex;\n    flex-direction: column;\n}\n\n.homeComponents {\n    padding: 50px;\n}\n\n.sliderbg {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh; \n    background-size: cover;\n    background-position: center;\n    will-change: opacity;\n  }\n\n.sliderDiv {\n    display: flex;\n    justify-content: center;\n    align-content: center;\n    position: relative;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh; \n    background-size: cover;\n    background-position: center;\n}\n\n.navLink {\n    color: #fff !important;\n}\n\n.navLink:hover {\n    color: darkgrey !important;\n    cursor: pointer !important;\n}\n\n.introText {\n    position: absolute;\n    top: 40%;\n    left: 0;\n    width: 100vw;\n    height: 100vh; \n    text-align: center;\n    color: #fff;\n    font-weight: 500;\n    font-family: -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,\"Noto Sans\",\"Liberation Sans\",sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\";;\n    align-self: center;\n    line-height: 1.2;\n}\n\n.outlineButton {\n    border: 1px solid white;\n    background-color:transparent;\n    color: white;\n    padding: 10px 14px;\n    font-size: 16px;\n    cursor: pointer;\n  }\n\n  .outlineButton:hover {\n    border: 1px solid white !important;\n    background-color: #87107f !important;\n  }\n\n  .outlineButton:focus {\n    border: 1px solid white !important;\n    background-color: #87107f !important;\n  }"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".homeBody {\n    display: flex;\n    flex-direction: column;\n}\n\n.homeComponents {\n    padding: 50px;\n}\n\n.sliderbg {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh; \n    background-size: cover;\n    background-position: center;\n    will-change: opacity;\n  }\n\n.sliderDiv {\n    display: flex;\n    justify-content: center;\n    align-content: center;\n    position: relative;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh; \n    background-size: cover;\n    background-position: center;\n}\n\n.navLink {\n    color: #fff !important;\n}\n\n.navLink:hover {\n    color: darkgrey !important;\n    cursor: pointer !important;\n}\n\n.introText {\n    position: absolute;\n    top: 40%;\n    left: 0;\n    width: 100vw;\n    height: 100vh; \n    text-align: center;\n    color: #fff;\n    font-weight: 500;\n    font-family: -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,\"Noto Sans\",\"Liberation Sans\",sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\";;\n    align-self: center;\n    line-height: 1.2;\n}\n\n.outlineButton {\n    border: 1px solid white;\n    background-color:transparent;\n    color: white;\n    padding: 10px 14px;\n    font-size: 16px;\n    cursor: pointer;\n}\n\n.outlineButton:hover {\nborder: 1px solid white !important;\nbackground-color: #87107f !important;\n}\n\n.outlineButton:focus {\nborder: 1px solid white !important;\nbackground-color: #87107f !important;\n}\n\n.navbar-light span.navbar-toggler-icon {\n    color: white !important;\n  }", "",{"version":3,"sources":["webpack://./public/styles.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,sBAAsB;AAC1B;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,kBAAkB;IAClB,MAAM;IACN,OAAO;IACP,YAAY;IACZ,aAAa;IACb,sBAAsB;IACtB,2BAA2B;IAC3B,oBAAoB;EACtB;;AAEF;IACI,aAAa;IACb,uBAAuB;IACvB,qBAAqB;IACrB,kBAAkB;IAClB,MAAM;IACN,OAAO;IACP,YAAY;IACZ,aAAa;IACb,sBAAsB;IACtB,2BAA2B;AAC/B;;AAEA;IACI,sBAAsB;AAC1B;;AAEA;IACI,0BAA0B;IAC1B,0BAA0B;AAC9B;;AAEA;IACI,kBAAkB;IAClB,QAAQ;IACR,OAAO;IACP,YAAY;IACZ,aAAa;IACb,kBAAkB;IAClB,WAAW;IACX,gBAAgB;IAChB,yMAAyM;IACzM,kBAAkB;IAClB,gBAAgB;AACpB;;AAEA;IACI,uBAAuB;IACvB,4BAA4B;IAC5B,YAAY;IACZ,kBAAkB;IAClB,eAAe;IACf,eAAe;AACnB;;AAEA;AACA,kCAAkC;AAClC,oCAAoC;AACpC;;AAEA;AACA,kCAAkC;AAClC,oCAAoC;AACpC;;AAEA;IACI,uBAAuB;EACzB","sourcesContent":[".homeBody {\n    display: flex;\n    flex-direction: column;\n}\n\n.homeComponents {\n    padding: 50px;\n}\n\n.sliderbg {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh; \n    background-size: cover;\n    background-position: center;\n    will-change: opacity;\n  }\n\n.sliderDiv {\n    display: flex;\n    justify-content: center;\n    align-content: center;\n    position: relative;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh; \n    background-size: cover;\n    background-position: center;\n}\n\n.navLink {\n    color: #fff !important;\n}\n\n.navLink:hover {\n    color: darkgrey !important;\n    cursor: pointer !important;\n}\n\n.introText {\n    position: absolute;\n    top: 40%;\n    left: 0;\n    width: 100vw;\n    height: 100vh; \n    text-align: center;\n    color: #fff;\n    font-weight: 500;\n    font-family: -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,\"Noto Sans\",\"Liberation Sans\",sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\";;\n    align-self: center;\n    line-height: 1.2;\n}\n\n.outlineButton {\n    border: 1px solid white;\n    background-color:transparent;\n    color: white;\n    padding: 10px 14px;\n    font-size: 16px;\n    cursor: pointer;\n}\n\n.outlineButton:hover {\nborder: 1px solid white !important;\nbackground-color: #87107f !important;\n}\n\n.outlineButton:focus {\nborder: 1px solid white !important;\nbackground-color: #87107f !important;\n}\n\n.navbar-light span.navbar-toggler-icon {\n    color: white !important;\n  }"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

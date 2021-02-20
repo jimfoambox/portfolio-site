@@ -82,14 +82,20 @@ export default class Contact extends React.Component {
         if (sent) { 
             return (
             <div style={{ padding: 80 }}>
-                <Spring from={{ transform: 'translate3d(0,-40px,0)', opacity: 0 }} to={{ transform: 'translate3d(0,0px,0)', opacity: 1 }} delay={100} config={config.gentle}>
-                    {props => (
-                        <animated.div style={{ margin: 150, textAlign: 'center', ...props }}>
-                        <h3>Message Sent</h3>
-                        <h6>I will respond to you as quickly as possible!</h6>
-                        </animated.div>
-                    )}
-                </Spring>
+                <Container>
+                    <Row>
+                        <Col xs={12}>
+                            <Spring from={{ transform: 'translate3d(0,-40px,0)', opacity: 0 }} to={{ transform: 'translate3d(0,0px,0)', opacity: 1 }} delay={100} config={config.gentle}>
+                                {props => (
+                                    <animated.div style={{ margin: 150, textAlign: 'center', ...props }}>
+                                    <h3>Message Sent</h3>
+                                    <h6>I will respond to you as quickly as possible!</h6>
+                                    </animated.div>
+                                )}
+                            </Spring>
+                        </Col>
+                    </Row>
+                </Container>
             </div> ) 
         } 
         return (
@@ -100,10 +106,10 @@ export default class Contact extends React.Component {
                 </div>
                 <Container>
                 <InView tag='div' onChange={this.handleView} threshold={.5} triggerOnce={true}>
-                    <Row>
+                    <Row className="justify-content-center">
                         <Col>
                         </Col>
-                        <Col>
+                        <Col md={4} xs={12}>
                             <Form onSubmit={this.onSubmit}>
                                 <Form.Group controlId="exampleForm.ControlInput1">
                                     <Spring to={{ transform: isVisible ? 'translate3d(0,0px,0)': 'translate3d(0,-40px,0)', opacity: isVisible ? 1 : 0 }} delay={200} config={config.gentle}>

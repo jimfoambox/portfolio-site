@@ -10,24 +10,27 @@ const Routes = () => {
         <Router>
             <div>
                 <Slideshow />
-                    <Navbar bg='dark' expand='lg' sticky="top">
-                        <Nav>
+                    <Navbar collapseOnSelect bg='dark' variant='dark' expand='lg' sticky="top" style={{width:'100vw'}}>
+                        <Nav >
                             <div><img src='/assets/jamesgilllogo.png' style={{ height: 40 }} /></div>
                         </Nav>
-                        <Nav className='ml-auto'>
-                            <NavItem eventkey={1} href="/">
-                                <Nav.Link as={Link} className="navLink" spy={true} smooth={true} offset={-500} duration={500} to="home">Home</Nav.Link>
-                            </NavItem>
-                            <NavItem eventkey={2} href="/">
-                                <Nav.Link as={Link} className="navLink" spy={true} smooth={true} offset={-70} duration={500} to="portfolio">Portfolio</Nav.Link>
-                            </NavItem>
-                            <NavItem eventkey={3} href="/">
-                                <Nav.Link as={Link} className="navLink" spy={true} smooth={true} offset={-70} duration={500} to="aboutme">About Me</Nav.Link>
-                            </NavItem>
-                            <NavItem eventkey={4} href="/">
-                                <Nav.Link as={Link} className="navLink" spy={true} smooth={true} offset={50} duration={500} to="contact">Contact</Nav.Link>
-                            </NavItem>
-                        </Nav>
+                        <Navbar.Toggle aria-controls="responsive-navbar-nav" variant='dark' bg='dark'/>
+                        <Navbar.Collapse id="responsive-navbar-nav">
+                            <Nav className='ml-auto'>
+                                <NavItem eventkey={1} href="/">
+                                    <Nav.Link as={Link} className="navLink" spy={true} smooth={true} offset={-500} duration={500} to="home">Home</Nav.Link>
+                                </NavItem>
+                                <NavItem eventkey={2} href="/">
+                                    <Nav.Link as={Link} className="navLink" spy={true} smooth={true} offset={0} duration={500} to="portfolio">Portfolio</Nav.Link>
+                                </NavItem>
+                                <NavItem eventkey={3} href="/">
+                                    <Nav.Link as={Link} className="navLink" spy={true} smooth={true} offset={0} duration={500} to="aboutme">About Me</Nav.Link>
+                                </NavItem>
+                                <NavItem eventkey={4} href="/">
+                                    <Nav.Link as={Link} className="navLink" spy={true} smooth={true} offset={50} duration={500} to="contact">Contact</Nav.Link>
+                                </NavItem>
+                            </Nav>
+                        </Navbar.Collapse>
                     </Navbar>
                 <main>
                     <Switch>

@@ -73,8 +73,6 @@ border: 1px solid white !important;
 background-color: #87107f !important;
 }
 
-/* @media screen and (max-width: 601px) {
-    h1 {
-    font-size: 5rem !important;
-    }
-} */
+.navbar-light span.navbar-toggler-icon {
+    color: white !important;
+  }
