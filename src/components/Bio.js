@@ -38,7 +38,7 @@ export default class Bio extends React.Component {
                 </div>
                 <Container>
                         <Row className="justify-content-center">
-                            {/* <InView tag='div' onChange={this.handleView} threshold={.5} triggerOnce={true}> */}
+                            <InView tag='div' onChange={this.handleView} threshold={.5} triggerOnce={true}>
                                 <Col xs={12}>
                                     <Spring to={{ transform: isVisible ? 'translate3d(0,0px,0)': 'translate3d(0,-40px,0)', opacity: isVisible ? 1 : 0 }} delay={300} config={config.gentle}>
                                         {props => (
@@ -51,30 +51,30 @@ export default class Bio extends React.Component {
                                 <Row className="justify-content-center">
                                     <Spring to={{ transform: isVisible ? 'translate3d(0,0px,0)': 'translate3d(0,-40px,0)', opacity: isVisible ? 1 : 0 }} delay={500} config={config.gentle}>
                                         {props => (
-                                            <a href={"https://github.com/jimfoambox"} target={'_blank'}>
+                                            <animated.a href={"https://github.com/jimfoambox"} target={'_blank'}>
                                                 <img style={{width: 100, margin: 14, ...props}} src='/assets/githublogo500.png' />
-                                            </a>
+                                            </animated.a>
                                         )}
                                     </Spring>
                                     <Spring to={{ transform: isVisible ? 'translate3d(0,0px,0)': 'translate3d(0,-40px,0)', opacity: isVisible ? 1 : 0 }} delay={700} config={config.gentle}>
                                         {props => (
-                                            <a href={"https://www.linkedin.com/in/james-gill-a7434a35/"} target={'_blank'}>
+                                            <animated.a href={"https://www.linkedin.com/in/james-gill-a7434a35/"} target={'_blank'}>
                                                 <img style={{width: 100, margin: 27, ...props}} src='/assets/linkedinlogo500.png' />
-                                            </a>
+                                            </animated.a>
                                         )}
                                     </Spring>
                                     <Spring to={{ transform: isVisible ? 'translate3d(0,0px,0)': 'translate3d(0,-40px,0)', opacity: isVisible ? 1 : 0 }} delay={900} config={config.gentle}>
                                         {props => (
-                                            <a href={"https://jamesgill2019.medium.com/"} target={'_blank'}>
+                                            <animated.a href={"https://jamesgill2019.medium.com/"} target={'_blank'}>
                                                 <img style={{width: 100, margin: 14, ...props}} src='/assets/mediumlogo500.png' />
-                                            </a>
+                                            </animated.a>
                                         )}
                                     </Spring>
                                 </Row>
                                 <Col xs={12}>
                                     <Spring to={{ transform: isVisible ? 'translate3d(0,-40px,0)': 'translate3d(0,0px,0)', opacity: isVisible ? 1 : 0 }} delay={150} config={config.gentle}>
                                         {props => (
-                                            <p style={{margin: 50, ...props}}> My name is James Gill, and I am a full stack developer based out of Jersey City, New Jersey.  
+                                            <animated.p style={{margin: 50, ...props}}> My name is James Gill, and I am a full stack developer based out of Jersey City, New Jersey.  
                                                 Prior to my move to the world of software development, I was an audio engineer for 10 years, involved primarily 
                                                 in audio recording, music production, and sound + video system installation.  I first caught the 
                                                 coding bug during an internship right out of college, where I helped design and edit web pages 
@@ -82,11 +82,11 @@ export default class Bio extends React.Component {
                                                 it became clear the writing was on the wall, and I decided to make the career change into the world of professional 
                                                 software development.  I am a graduate and teaching fellow at FullStack Academy and have worked ever since to perfect the necessary skills to 
                                                 succeed and be a long-term team asset in the software industry.
-                                            </p>
+                                            </animated.p>
                                         )}
                                     </Spring>
                                 </Col>
-                            {/* </InView> */}
+                            </InView>
                             <InView tag='div' onChange={this.secondHandleView} threshold={.3} triggerOnce={true}>
                                 <Row>
                                     <Col md={4} xs={12}>
@@ -97,17 +97,17 @@ export default class Bio extends React.Component {
                                         </Spring>
                                         <Spring to={{ transform: isVisibleTwo ? 'translate3d(0,0px,0)': 'translate3d(0,-40px,0)', opacity: isVisibleTwo ? 1 : 0 }} delay={300} config={config.gentle}>
                                             {props => (
-                                                <AnimatedRow className="justify-content-center" style={props}><p>Javascript | HTML | CSS</p></AnimatedRow>
+                                                <AnimatedRow className="justify-content-center" style={props}><p style={{textAlign:'center'}}>Javascript | HTML | CSS</p></AnimatedRow>
                                             )}
                                         </Spring>
                                         <Spring to={{ transform: isVisibleTwo ? 'translate3d(0,0px,0)': 'translate3d(0,-40px,0)', opacity: isVisibleTwo ? 1 : 0 }} delay={400} config={config.gentle}>
                                             {props => (
-                                                <AnimatedRow className="justify-content-center" style={props}><p>React | Redux | Git/Github</p></AnimatedRow>
+                                                <AnimatedRow className="justify-content-center" style={props}><p style={{textAlign:'center'}}>React | Redux | Git/Github</p></AnimatedRow>
                                             )}
                                         </Spring>
                                         <Spring to={{ transform: isVisibleTwo ? 'translate3d(0,0px,0)': 'translate3d(0,-40px,0)', opacity: isVisibleTwo ? 1 : 0 }} delay={500} config={config.gentle}>
                                             {props => (
-                                                <AnimatedRow className="justify-content-center" style={props}><p>Node.js | Express | Sequelize</p></AnimatedRow>
+                                                <AnimatedRow className="justify-content-center" style={props}><p style={{textAlign:'center'}}>Node.js | Express | Sequelize</p></AnimatedRow>
                                             )}
                                         </Spring>
                                     </Col>
@@ -119,17 +119,17 @@ export default class Bio extends React.Component {
                                         </Spring>
                                         <Spring to={{ transform: isVisibleTwo ? 'translate3d(0,0px,0)': 'translate3d(0,-40px,0)', opacity: isVisibleTwo ? 1 : 0 }} delay={300} config={config.gentle}>
                                             {props => (
-                                                <AnimatedRow className="justify-content-center" style={props}><p>React-Native | PostgresSQL | Webpack</p></AnimatedRow>
+                                                <AnimatedRow className="justify-content-center" style={props}><p style={{textAlign:'center'}}>React-Native | PostgresSQL | Webpack</p></AnimatedRow>
                                             )}
                                         </Spring>
                                         <Spring to={{ transform: isVisibleTwo ? 'translate3d(0,0px,0)': 'translate3d(0,-40px,0)', opacity: isVisibleTwo ? 1 : 0 }} delay={400} config={config.gentle}>
                                             {props => (
-                                                <AnimatedRow className="justify-content-center" style={props}><p>Mocha | Chai | Google Firebase</p></AnimatedRow>
+                                                <AnimatedRow className="justify-content-center" style={props}><p style={{textAlign:'center'}}>Mocha/Chai | Google Firebase</p></AnimatedRow>
                                             )}
                                         </Spring>
                                         <Spring to={{ transform: isVisibleTwo ? 'translate3d(0,0px,0)': 'translate3d(0,-40px,0)', opacity: isVisibleTwo ? 1 : 0 }} delay={500} config={config.gentle}>
                                             {props => (
-                                                <AnimatedRow className="justify-content-center" style={props}><p>Google Cloud APIs | Heroku</p></AnimatedRow>
+                                                <AnimatedRow className="justify-content-center" style={props}><p style={{textAlign:'center'}}>Google Cloud APIs | Heroku</p></AnimatedRow>
                                             )}
                                         </Spring>
                                     </Col>
@@ -141,17 +141,17 @@ export default class Bio extends React.Component {
                                         </Spring>
                                         <Spring to={{ transform: isVisibleTwo ? 'translate3d(0,0px,0)': 'translate3d(0,-40px,0)', opacity: isVisibleTwo ? 1 : 0 }} delay={300} config={config.gentle}>
                                             {props => (
-                                                <AnimatedRow className="justify-content-center" style={props}><p>Wordpress | Shopify | React-Bootstrap</p></AnimatedRow>
+                                                <AnimatedRow className="justify-content-center" style={props}><p style={{textAlign:'center'}}>Wordpress | Shopify</p></AnimatedRow>
                                             )}
                                         </Spring>
                                         <Spring to={{ transform: isVisibleTwo ? 'translate3d(0,0px,0)': 'translate3d(0,-40px,0)', opacity: isVisibleTwo ? 1 : 0 }} delay={400} config={config.gentle}>
                                             {props => (
-                                                <AnimatedRow className="justify-content-center" style={props}><p>Testem | React Spring</p></AnimatedRow>
+                                                <AnimatedRow className="justify-content-center" style={props}><p style={{textAlign:'center'}}>Testem | React Spring</p></AnimatedRow>
                                             )}
                                         </Spring>
                                         <Spring to={{ transform: isVisibleTwo ? 'translate3d(0,0px,0)': 'translate3d(0,-40px,0)', opacity: isVisibleTwo ? 1 : 0 }} delay={500} config={config.gentle}>
                                             {props => (
-                                                <AnimatedRow className="justify-content-center" style={props}><p>Phaser.js</p></AnimatedRow>
+                                                <AnimatedRow className="justify-content-center" style={props}><p style={{textAlign:'center'}}>Phaser.js | React-Bootstrap</p></AnimatedRow>
                                             )}
                                         </Spring>
                                     </Col>
