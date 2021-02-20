@@ -1220,7 +1220,8 @@ var Portfolio = /*#__PURE__*/function (_React$Component) {
         id: "portfolio",
         style: {
           padding: 80
-        }
+        },
+        className: "col-sm-12"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
         style: {
           textAlign: 'center',
