@@ -36,9 +36,9 @@ export default class Bio extends React.Component {
                 <div>
                     <h1 style={{ textAlign:'center', paddingBottom: 10 }}>About Me</h1>      
                 </div>
-                <Container>
+                <Container fluid>
                         <Row>
-                            <Col>
+                            <Col xs={12}>
                                 <InView tag='div' onChange={this.handleView} threshold={.5} triggerOnce={true}>
                                     <Col xs={12}>
                                         <Spring to={{ transform: isVisible ? 'translate3d(0,0px,0)': 'translate3d(0,-40px,0)', opacity: isVisible ? 1 : 0 }} delay={300} config={config.gentle}>

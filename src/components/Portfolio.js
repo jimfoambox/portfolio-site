@@ -90,7 +90,7 @@ import { InView } from 'react-intersection-observer'
                                             <Card.Body>
                                                 <Card.Title>Fallen Planet</Card.Title>
                                                 <Card.Text>
-                                                    A 2D platform sci-fi game built in Javascript with the Phaser 3 library and launched in browser inside of a React frontend.
+                                                    A 2D platform sci-fi game built in Javascript with the Phaser 3 library and launched in browser with React.
                                                 </Card.Text>
                                                 <a href={"https://fallen-planet.herokuapp.com/"} target={'_blank'}>
                                                     <Button variant="primary">Play The Game</Button>
