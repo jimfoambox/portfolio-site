@@ -362,9 +362,10 @@ var Bio = /*#__PURE__*/function (_React$Component) {
           style: props
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
           style: {
-            width: 200
+            width: 200,
+            height: 200
           },
-          src: "/assets/profilepiccircle1200.png"
+          src: "/assets/profilepiccircle400.png"
         }));
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__.default, {
         className: "justify-content-center"
