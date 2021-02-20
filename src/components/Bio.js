@@ -43,7 +43,7 @@ export default class Bio extends React.Component {
                                     <Spring to={{ transform: isVisible ? 'translate3d(0,0px,0)': 'translate3d(0,-40px,0)', opacity: isVisible ? 1 : 0 }} delay={300} config={config.gentle}>
                                         {props => (
                                             <AnimatedRow className="justify-content-center" style={props}>
-                                                <img style={{width: '200px', height:'200px'}} src='/assets/profilepiccircle400.png'/>
+                                                <img style={{width: '12rem', height:'12rem'}} src='/assets/profilepiccircle400.png'/>
                                             </AnimatedRow>
                                         )}
                                     </Spring>
