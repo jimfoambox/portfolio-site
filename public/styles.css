@@ -76,3 +76,9 @@ background-color: #87107f !important;
 .profilePic {
     height: 200px;
 }
+
+@media only screen and (max-device-width: 480px) {
+    .profilePic {
+        height:100px;
+    }
+}
