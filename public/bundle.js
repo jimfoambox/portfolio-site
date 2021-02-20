@@ -251,10 +251,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Row.js");
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Container.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Col.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Col.js");
 /* harmony import */ var react_spring__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-spring */ "./node_modules/react-spring/web.js");
 /* harmony import */ var react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-spring/renderprops */ "./node_modules/react-spring/renderprops.js");
-/* harmony import */ var react_intersection_observer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-intersection-observer */ "./node_modules/react-intersection-observer/react-intersection-observer.m.js");
+/* harmony import */ var react_intersection_observer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-intersection-observer */ "./node_modules/react-intersection-observer/react-intersection-observer.m.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -340,16 +340,14 @@ var Bio = /*#__PURE__*/function (_React$Component) {
           textAlign: 'center',
           paddingBottom: 10
         }
-      }, "About Me")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__.default, {
-        fluid: true
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__.default, {
-        xs: 12
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_intersection_observer__WEBPACK_IMPORTED_MODULE_5__.InView, {
+      }, "About Me")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__.default, {
+        className: "justify-content-center"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_intersection_observer__WEBPACK_IMPORTED_MODULE_4__.InView, {
         tag: "div",
         onChange: this.handleView,
         threshold: .5,
         triggerOnce: true
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__.default, {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default, {
         xs: 12
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.Spring, {
         to: {
@@ -424,7 +422,7 @@ var Bio = /*#__PURE__*/function (_React$Component) {
           }, props),
           src: "/assets/mediumlogo500.png"
         }));
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__.default, {
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default, {
         xs: 12
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.Spring, {
         to: {
@@ -439,14 +437,12 @@ var Bio = /*#__PURE__*/function (_React$Component) {
             margin: 50
           }, props)
         }, " My name is James Gill, and I am a full stack developer based out of Jersey City, New Jersey. Prior to my move to the world of software development, I was an audio engineer for 10 years, involved primarily in audio recording, music production, and sound + video system installation.  I first caught the coding bug during an internship right out of college, where I helped design and edit web pages and newsletters.  The more I delved into software, the more I felt myself being pulled into the world of tech.  Eventually it became clear the writing was on the wall, and I decided to make the career change into the world of professional software development.  I am a graduate and teaching fellow at FullStack Academy and have worked ever since to perfect the necessary skills to succeed and be a long-term team asset in the software industry.");
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_intersection_observer__WEBPACK_IMPORTED_MODULE_5__.InView, {
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_intersection_observer__WEBPACK_IMPORTED_MODULE_4__.InView, {
         tag: "div",
         onChange: this.secondHandleView,
         threshold: .3,
         triggerOnce: true
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__.default, {
-        className: "justify-content-center"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__.default, {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default, {
         md: 4,
         xs: 12
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.Spring, {
@@ -497,7 +493,7 @@ var Bio = /*#__PURE__*/function (_React$Component) {
           className: "justify-content-center",
           style: props
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Node.js | Express | Sequelize"));
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__.default, {
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default, {
         md: 4,
         xs: 12
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.Spring, {
@@ -548,7 +544,7 @@ var Bio = /*#__PURE__*/function (_React$Component) {
           className: "justify-content-center",
           style: props
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Google Cloud APIs | Heroku"));
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__.default, {
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default, {
         md: 4,
         xs: 12
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_6__.Spring, {
@@ -599,7 +595,7 @@ var Bio = /*#__PURE__*/function (_React$Component) {
           className: "justify-content-center",
           style: props
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Phaser.js"));
-      }))))))));
+      })))))));
     }
   }]);
 
@@ -1692,7 +1688,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".homeBody {\n    display: flex;\n    flex-direction: column;\n}\n\n.homeComponents {\n    padding: 50px;\n}\n\n.sliderbg {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh; \n    background-size: cover;\n    background-position: center;\n    will-change: opacity;\n  }\n\n.sliderDiv {\n    display: flex;\n    justify-content: center;\n    align-content: center;\n    position: relative;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh; \n    background-size: cover;\n    background-position: center;\n}\n\n.navLink {\n    color: #fff !important;\n}\n\n.navLink:hover {\n    color: darkgrey !important;\n    cursor: pointer !important;\n}\n\n.introText {\n    position: absolute;\n    top: 40%;\n    left: 0;\n    width: 100vw;\n    height: 100vh; \n    text-align: center;\n    color: #fff;\n    font-weight: 500;\n    font-family: -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,\"Noto Sans\",\"Liberation Sans\",sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\";;\n    align-self: center;\n    line-height: 1.2;\n}\n\n.outlineButton {\n    border: 1px solid white;\n    background-color:transparent;\n    color: white;\n    padding: 10px 14px;\n    font-size: 16px;\n    cursor: pointer;\n}\n\n.outlineButton:hover {\nborder: 1px solid white !important;\nbackground-color: #87107f !important;\n}\n\n.outlineButton:focus {\nborder: 1px solid white !important;\nbackground-color: #87107f !important;\n}\n\n.navbar-light span.navbar-toggler-icon {\n    color: white !important;\n  }", "",{"version":3,"sources":["webpack://./public/styles.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,sBAAsB;AAC1B;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,kBAAkB;IAClB,MAAM;IACN,OAAO;IACP,YAAY;IACZ,aAAa;IACb,sBAAsB;IACtB,2BAA2B;IAC3B,oBAAoB;EACtB;;AAEF;IACI,aAAa;IACb,uBAAuB;IACvB,qBAAqB;IACrB,kBAAkB;IAClB,MAAM;IACN,OAAO;IACP,YAAY;IACZ,aAAa;IACb,sBAAsB;IACtB,2BAA2B;AAC/B;;AAEA;IACI,sBAAsB;AAC1B;;AAEA;IACI,0BAA0B;IAC1B,0BAA0B;AAC9B;;AAEA;IACI,kBAAkB;IAClB,QAAQ;IACR,OAAO;IACP,YAAY;IACZ,aAAa;IACb,kBAAkB;IAClB,WAAW;IACX,gBAAgB;IAChB,yMAAyM;IACzM,kBAAkB;IAClB,gBAAgB;AACpB;;AAEA;IACI,uBAAuB;IACvB,4BAA4B;IAC5B,YAAY;IACZ,kBAAkB;IAClB,eAAe;IACf,eAAe;AACnB;;AAEA;AACA,kCAAkC;AAClC,oCAAoC;AACpC;;AAEA;AACA,kCAAkC;AAClC,oCAAoC;AACpC;;AAEA;IACI,uBAAuB;EACzB","sourcesContent":[".homeBody {\n    display: flex;\n    flex-direction: column;\n}\n\n.homeComponents {\n    padding: 50px;\n}\n\n.sliderbg {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh; \n    background-size: cover;\n    background-position: center;\n    will-change: opacity;\n  }\n\n.sliderDiv {\n    display: flex;\n    justify-content: center;\n    align-content: center;\n    position: relative;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh; \n    background-size: cover;\n    background-position: center;\n}\n\n.navLink {\n    color: #fff !important;\n}\n\n.navLink:hover {\n    color: darkgrey !important;\n    cursor: pointer !important;\n}\n\n.introText {\n    position: absolute;\n    top: 40%;\n    left: 0;\n    width: 100vw;\n    height: 100vh; \n    text-align: center;\n    color: #fff;\n    font-weight: 500;\n    font-family: -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,\"Noto Sans\",\"Liberation Sans\",sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\";;\n    align-self: center;\n    line-height: 1.2;\n}\n\n.outlineButton {\n    border: 1px solid white;\n    background-color:transparent;\n    color: white;\n    padding: 10px 14px;\n    font-size: 16px;\n    cursor: pointer;\n}\n\n.outlineButton:hover {\nborder: 1px solid white !important;\nbackground-color: #87107f !important;\n}\n\n.outlineButton:focus {\nborder: 1px solid white !important;\nbackground-color: #87107f !important;\n}\n\n.navbar-light span.navbar-toggler-icon {\n    color: white !important;\n  }"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".homeBody {\n    display: flex;\n    flex-direction: column;\n}\n\n.homeComponents {\n    padding: 50px;\n}\n\n.sliderbg {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh; \n    background-size: cover;\n    background-position: center;\n    will-change: opacity;\n  }\n\n.sliderDiv {\n    display: flex;\n    justify-content: center;\n    align-content: center;\n    position: relative;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh; \n    background-size: cover;\n    background-position: center;\n}\n\n.navLink {\n    color: #fff !important;\n}\n\n.navLink:hover {\n    color: darkgrey !important;\n    cursor: pointer !important;\n}\n\n.introText {\n    position: absolute;\n    top: 40%;\n    left: 0;\n    width: 100vw;\n    height: 100vh; \n    text-align: center;\n    color: #fff;\n    font-weight: 500;\n    font-family: -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,\"Noto Sans\",\"Liberation Sans\",sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\";;\n    align-self: center;\n    line-height: 1.2;\n}\n\n.outlineButton {\n    border: 1px solid white;\n    background-color:transparent;\n    color: white;\n    padding: 10px 14px;\n    font-size: 16px;\n    cursor: pointer;\n}\n\n.outlineButton:hover {\nborder: 1px solid white !important;\nbackground-color: #87107f !important;\n}\n\n.outlineButton:focus {\nborder: 1px solid white !important;\nbackground-color: #87107f !important;\n}\n", "",{"version":3,"sources":["webpack://./public/styles.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,sBAAsB;AAC1B;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,kBAAkB;IAClB,MAAM;IACN,OAAO;IACP,YAAY;IACZ,aAAa;IACb,sBAAsB;IACtB,2BAA2B;IAC3B,oBAAoB;EACtB;;AAEF;IACI,aAAa;IACb,uBAAuB;IACvB,qBAAqB;IACrB,kBAAkB;IAClB,MAAM;IACN,OAAO;IACP,YAAY;IACZ,aAAa;IACb,sBAAsB;IACtB,2BAA2B;AAC/B;;AAEA;IACI,sBAAsB;AAC1B;;AAEA;IACI,0BAA0B;IAC1B,0BAA0B;AAC9B;;AAEA;IACI,kBAAkB;IAClB,QAAQ;IACR,OAAO;IACP,YAAY;IACZ,aAAa;IACb,kBAAkB;IAClB,WAAW;IACX,gBAAgB;IAChB,yMAAyM;IACzM,kBAAkB;IAClB,gBAAgB;AACpB;;AAEA;IACI,uBAAuB;IACvB,4BAA4B;IAC5B,YAAY;IACZ,kBAAkB;IAClB,eAAe;IACf,eAAe;AACnB;;AAEA;AACA,kCAAkC;AAClC,oCAAoC;AACpC;;AAEA;AACA,kCAAkC;AAClC,oCAAoC;AACpC","sourcesContent":[".homeBody {\n    display: flex;\n    flex-direction: column;\n}\n\n.homeComponents {\n    padding: 50px;\n}\n\n.sliderbg {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh; \n    background-size: cover;\n    background-position: center;\n    will-change: opacity;\n  }\n\n.sliderDiv {\n    display: flex;\n    justify-content: center;\n    align-content: center;\n    position: relative;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh; \n    background-size: cover;\n    background-position: center;\n}\n\n.navLink {\n    color: #fff !important;\n}\n\n.navLink:hover {\n    color: darkgrey !important;\n    cursor: pointer !important;\n}\n\n.introText {\n    position: absolute;\n    top: 40%;\n    left: 0;\n    width: 100vw;\n    height: 100vh; \n    text-align: center;\n    color: #fff;\n    font-weight: 500;\n    font-family: -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,\"Noto Sans\",\"Liberation Sans\",sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\";;\n    align-self: center;\n    line-height: 1.2;\n}\n\n.outlineButton {\n    border: 1px solid white;\n    background-color:transparent;\n    color: white;\n    padding: 10px 14px;\n    font-size: 16px;\n    cursor: pointer;\n}\n\n.outlineButton:hover {\nborder: 1px solid white !important;\nbackground-color: #87107f !important;\n}\n\n.outlineButton:focus {\nborder: 1px solid white !important;\nbackground-color: #87107f !important;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
