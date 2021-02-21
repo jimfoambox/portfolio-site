@@ -74,7 +74,7 @@ export default class Bio extends React.Component {
                                 <Col xs={12}>
                                     <Spring to={{ transform: isVisible ? 'translate3d(0,-40px,0)': 'translate3d(0,0px,0)', opacity: isVisible ? 1 : 0 }} delay={150} config={config.gentle}>
                                         {props => (
-                                            <animated.p style={{margin: 50, ...props}}> My name is James Gill, and I am a full stack developer based out of Jersey City, New Jersey.  
+                                            <animated.p style={{marginTop: 50, marginBottom: 50, ...props}}> My name is James Gill, and I am a full stack developer based out of Jersey City, New Jersey.  
                                                 Prior to my move to the world of software development, I was an audio engineer for 10 years, involved primarily 
                                                 in audio recording, music production, and sound + video system installation.  I first caught the 
                                                 coding bug during an internship right out of college, where I helped design and edit web pages 
