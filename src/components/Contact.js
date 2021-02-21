@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, Container, Row, Col, Button } from 'react-bootstrap';
+import { Form, Container, Row, Col, Button, Alert } from 'react-bootstrap';
 import * as emailjs from 'emailjs-com';
 import ReCAPTCHA from "react-google-recaptcha";
 import { Spring, config, animated } from 'react-spring/renderprops';
@@ -14,11 +14,13 @@ export default class Contact extends React.Component {
             email: '',
             message: '',
             sent: false,
-            isVisible: false
+            isVisible: false,
+            captchaVerified: false
         }
         this.onSubmit = this.onSubmit.bind(this)
         this.handleChange = this.handleChange.bind(this)
         this.handleView = this.handleView.bind(this)
+        this.verifyCallback = this.verifyCallback.bind(this)
     }
 
     handleView (inView) {
@@ -45,6 +47,10 @@ export default class Contact extends React.Component {
             this.setState({
                 message: 'This field is required.'
             })
+        if (!this.state.captchaVerified) {
+            event.preventDefault()
+            return (<Alert variant='secondary'>Please verify you are not a robot!</Alert>)
+        }
         } else {
             event.preventDefault()
             let templateParams = {
@@ -72,6 +78,12 @@ export default class Contact extends React.Component {
     handleChange (event) {
         this.setState({
             [event.target.name]: event.target.value
+        })
+    }
+
+    verifyCallback (response) {
+        this.setState({
+            captchaVerified: true
         })
     }
 
@@ -158,7 +170,7 @@ export default class Contact extends React.Component {
                                 <Spring to={{ transform: isVisible ? 'translate3d(0,0px,0)': 'translate3d(0,40px,0)', opacity: isVisible ? 1 : 0 }} delay={1100} config={config.gentle}>
                                     {props => (
                                         <animated.div style={props}>
-                                            <ReCAPTCHA sitekey="6LdZjFsaAAAAAJ2DqNJzjtqV9puWStQi6knj6mkX" />
+                                            <ReCAPTCHA sitekey="6LdZjFsaAAAAAJ2DqNJzjtqV9puWStQi6knj6mkX" verifyCallback={this.verifyCallback} />
                                         </animated.div>
                                     )}
                                 </Spring>
