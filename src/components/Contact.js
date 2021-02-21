@@ -101,6 +101,7 @@ export default class Contact extends React.Component {
         const { name, email, message, sent, showAlert } = this.state;
         const AnimatedRow = animated(Row)
         const { isVisible } = this.state
+        console.log(this.state.captchaVerified)
         if (sent) { 
             return (
             <div style={{ padding: 80 }}>

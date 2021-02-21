@@ -1007,6 +1007,7 @@ var Contact = /*#__PURE__*/function (_React$Component) {
           showAlert = _this$state.showAlert;
       var AnimatedRow = (0,react_spring_renderprops__WEBPACK_IMPORTED_MODULE_3__.animated)(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__.default);
       var isVisible = this.state.isVisible;
+      console.log(this.state.captchaVerified);
 
       if (sent) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
