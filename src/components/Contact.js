@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, Container, Row, Col, Button, Alert } from 'react-bootstrap';
+import { Form, Container, Row, Col, Button, Modal } from 'react-bootstrap';
 import * as emailjs from 'emailjs-com';
 import ReCAPTCHA from "react-google-recaptcha";
 import { Spring, config, animated } from 'react-spring/renderprops';
@@ -15,12 +15,14 @@ export default class Contact extends React.Component {
             message: '',
             sent: false,
             isVisible: false,
-            captchaVerified: false
+            captchaVerified: false,
+            showAlert: false
         }
         this.onSubmit = this.onSubmit.bind(this)
         this.handleChange = this.handleChange.bind(this)
         this.handleView = this.handleView.bind(this)
         this.verifyCallback = this.verifyCallback.bind(this)
+        this.closeAlert = this.closeAlert.bind(this)
     }
 
     handleView (inView) {
@@ -47,10 +49,12 @@ export default class Contact extends React.Component {
             this.setState({
                 message: 'This field is required.'
             })
+        }
         if (!this.state.captchaVerified) {
             event.preventDefault()
-            return (<Alert variant='secondary'>Please verify you are not a robot!</Alert>)
-        }
+            this.setState({
+                showAlert: true
+            })
         } else {
             event.preventDefault()
             let templateParams = {
@@ -87,8 +91,14 @@ export default class Contact extends React.Component {
         })
     }
 
+    closeAlert () {
+        this.setState({
+            showAlert: false
+        })
+    }
+
     render () {
-        const { name, email, message, sent } = this.state;
+        const { name, email, message, sent, showAlert } = this.state;
         const AnimatedRow = animated(Row)
         const { isVisible } = this.state
         if (sent) { 
@@ -188,6 +198,14 @@ export default class Contact extends React.Component {
                     </Row>
                 </InView>
                 </Container>
+                <Modal show={showAlert} onHide={this.closeAlert}>
+                <Modal.Header closeButton>
+                  <Modal.Title>Verification Required</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                  <p>Please verify you are not a robot, beep beep.</p>
+                </Modal.Body>
+              </Modal>
             </div>
         )
     }
