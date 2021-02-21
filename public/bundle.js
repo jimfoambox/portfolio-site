@@ -345,7 +345,7 @@ var Bio = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_intersection_observer__WEBPACK_IMPORTED_MODULE_4__.InView, {
         tag: "div",
         onChange: this.handleView,
-        threshold: .5,
+        threshold: .4,
         triggerOnce: true
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default, {
         xs: 12
@@ -832,7 +832,7 @@ var Contact = /*#__PURE__*/function (_React$Component) {
       }, "Reach out to me any time: I'd love to hear from you!")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_intersection_observer__WEBPACK_IMPORTED_MODULE_7__.InView, {
         tag: "div",
         onChange: this.handleView,
-        threshold: .5,
+        threshold: .4,
         triggerOnce: true
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__.default, {
         className: "justify-content-center"

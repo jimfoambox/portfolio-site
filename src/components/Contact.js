@@ -105,7 +105,7 @@ export default class Contact extends React.Component {
                     <p style={{ textAlign:'center'}} >Reach out to me any time: I'd love to hear from you!</p>      
                 </div>
                 <Container>
-                <InView tag='div' onChange={this.handleView} threshold={.5} triggerOnce={true}>
+                <InView tag='div' onChange={this.handleView} threshold={.4} triggerOnce={true}>
                     <Row className="justify-content-center">
                         <Col>
                         </Col>
