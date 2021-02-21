@@ -85,7 +85,7 @@ export default class Contact extends React.Component {
         })
     }
 
-    verifyCallback (response) {
+    verifyCallback () {
         this.setState({
             captchaVerified: true
         })
@@ -181,7 +181,7 @@ export default class Contact extends React.Component {
                                 <Spring to={{ transform: isVisible ? 'translate3d(0,0px,0)': 'translate3d(0,40px,0)', opacity: isVisible ? 1 : 0 }} delay={1100} config={config.gentle}>
                                     {props => (
                                         <animated.div style={props}>
-                                            <ReCAPTCHA sitekey="6LdZjFsaAAAAAJ2DqNJzjtqV9puWStQi6knj6mkX" verifyCallback={this.verifyCallback} />
+                                            <ReCAPTCHA sitekey="6LdZjFsaAAAAAJ2DqNJzjtqV9puWStQi6knj6mkX" onChange={this.verifyCallback} />
                                         </animated.div>
                                     )}
                                 </Spring>

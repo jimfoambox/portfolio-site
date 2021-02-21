@@ -982,7 +982,7 @@ var Contact = /*#__PURE__*/function (_React$Component) {
     }
   }, {
     key: "verifyCallback",
-    value: function verifyCallback(response) {
+    value: function verifyCallback() {
       this.setState({
         captchaVerified: true
       });
@@ -1173,7 +1173,7 @@ var Contact = /*#__PURE__*/function (_React$Component) {
           style: props
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_google_recaptcha__WEBPACK_IMPORTED_MODULE_2__.default, {
           sitekey: "6LdZjFsaAAAAAJ2DqNJzjtqV9puWStQi6knj6mkX",
-          verifyCallback: _this2.verifyCallback
+          onChange: _this2.verifyCallback
         }));
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_3__.Spring, {
         to: {
