@@ -1193,6 +1193,9 @@ var Contact = /*#__PURE__*/function (_React$Component) {
         show: showAlert,
         onHide: this.closeAlert
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Header, {
+        style: {
+          backgroundColor: '#f5f5f5'
+        },
         closeButton: true
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Title, null, "Verification Required")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Body, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Please verify you are not a robot, beep beep."))));
     }

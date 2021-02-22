@@ -200,7 +200,7 @@ export default class Contact extends React.Component {
                 </InView>
                 </Container>
                 <Modal show={showAlert} onHide={this.closeAlert}>
-                <Modal.Header closeButton>
+                <Modal.Header style={{ backgroundColor: '#f5f5f5' }} closeButton>
                   <Modal.Title>Verification Required</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
