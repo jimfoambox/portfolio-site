@@ -87,9 +87,8 @@ export default class Contact extends React.Component {
 
     verifyCallback () {
         this.setState({
-            captchaVerified: true
+            captchaVerified: !captchaVerified
         })
-        console.log(this.state.captchaVerified)
     }
 
     closeAlert () {
