@@ -984,7 +984,7 @@ var Contact = /*#__PURE__*/function (_React$Component) {
     key: "verifyCallback",
     value: function verifyCallback() {
       this.setState({
-        captchaVerified: !captchaVerified
+        captchaVerified: true
       });
     }
   }, {
