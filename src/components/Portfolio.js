@@ -4,10 +4,7 @@ import { animated } from 'react-spring'
 import { config, Spring } from 'react-spring/renderprops'
 import { InView } from 'react-intersection-observer'
 
-
-
-
- class Portfolio extends React.Component {
+class Portfolio extends React.Component {
     constructor () {
         super()
         this.state = {

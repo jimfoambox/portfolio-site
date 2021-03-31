@@ -1,39 +1,38 @@
 import React from 'react'
-import Particles from 'react-particles-js'
+import CELLS from 'vanta/dist/vanta.cells.min'
 import IntroTitle from './IntroTitle'
 
 class Slideshow extends React.Component {
+    constructor () {
+        super()
+        this.vantaRef = React.createRef()
+    }
+
+    componentDidMount () {
+        this.vantaEffect = CELLS({
+            el: this.vantaRef.current,
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            color1: 0x8378e,
+            color2: 0x140618,
+            speed: 2.50
+        })
+    }
+
+    componentWillUnmount () {
+        if (this.vantaEffect) this.vantaEffect.destroy()
+    }
 
     render () {
         return (
-            <div className='sliderDiv'>
-            <div>
-                <Particles 
-                    params={{
-                        "particles": {
-                            "number": {
-                                "value": 50
-                            },
-                            "size": {
-                                "value": 3
-                            }
-                        },
-                        "interactivity": {
-                            "events": {
-                                "onhover": {
-                                    "enable": true,
-                                    "mode": "repulse"
-                                }
-                            }
-                        }
-	                }} 
-                    className="sliderbg" 
-                    style={{backgroundImage: 'url(https://i.ibb.co/FxmvvnJ/gray-Particles-Bg2.jpg/&auto=format&fit=crop)'}}
-                />
-            </div>
-            <div>
+            <div ref={this.vantaRef} className='sliderDiv'>
+            
                 <IntroTitle />
-            </div>
+            
             </div>
         )
     }
