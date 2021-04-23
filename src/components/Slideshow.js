@@ -9,18 +9,18 @@ class Slideshow extends React.Component {
     }
 
     componentDidMount () {
-        this.vantaEffect = CELLS({
-            el: this.vantaRef.current,
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            scale: 1.00,
-            color1: 0x8378e,
-            color2: 0x140618,
-            speed: 2.50
-        })
+        // this.vantaEffect = CELLS({
+        //     el: this.vantaRef.current,
+        //     mouseControls: true,
+        //     touchControls: true,
+        //     gyroControls: false,
+        //     minHeight: 200.00,
+        //     minWidth: 200.00,
+        //     scale: 1.00,
+        //     color1: 0x8378e,
+        //     color2: 0x140618,
+        //     speed: 2.50
+        // })
     }
 
     componentWillUnmount () {
