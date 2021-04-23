@@ -40,7 +40,7 @@ const IntroTitle = () => {
                 {props => (
                     <div style={props}>
                         <Link spy={true} smooth={true} offset={-20} duration={500} to="portfolio">
-                            <animated.Button style={props} className="outlineButton">Learn More</animated.Button>
+                            <Button style={props} className="outlineButton">Learn More</Button>
                         </Link>
                     </div>
                 )}
