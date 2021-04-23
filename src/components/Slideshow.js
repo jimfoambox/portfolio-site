@@ -1,41 +1,122 @@
 import React from 'react'
-import CELLS from 'vanta/dist/vanta.cells.min'
 import IntroTitle from './IntroTitle'
+import Particles from 'react-tsparticles'
 
 class Slideshow extends React.Component {
     constructor () {
         super()
-        this.vantaRef = React.createRef()
-    }
-
-    componentDidMount () {
-        // this.vantaEffect = CELLS({
-        //     el: this.vantaRef.current,
-        //     mouseControls: true,
-        //     touchControls: true,
-        //     gyroControls: false,
-        //     minHeight: 200.00,
-        //     minWidth: 200.00,
-        //     scale: 1.00,
-        //     color1: 0x8378e,
-        //     color2: 0x140618,
-        //     speed: 2.50
-        // })
-    }
-
-    componentWillUnmount () {
-        if (this.vantaEffect) this.vantaEffect.destroy()
     }
 
     render () {
         return (
-            <div ref={this.vantaRef} className='sliderDiv'>
-            
+            <div className='sliderDiv'>
+                <Particles
+                    id="tsparticles"
+                    options={options}
+                    className='sliderbg'
+                />
                 <IntroTitle />
-            
             </div>
         )
     }
 }
 
 export default Slideshow
+
+
+const options = {
+    background: {
+        color: {
+            value: "#343a40",
+        },
+    },
+    fpsLimit: 60,
+    interactivity: {
+        detectsOn: "canvas",
+        events: {
+            onClick: {
+                enable: true,
+                mode: "push",
+            },
+            onHover: {
+                enable: true,
+                mode: "repulse",
+            },
+            resize: true,
+        },
+        modes: {
+            bubble: {
+                distance: 400,
+                duration: 2,
+                opacity: 0.8,
+                size: 40,
+            },
+            push: {
+                quantity: 4,
+            },
+            repulse: {
+                distance: 200,
+                duration: 0.4,
+            },
+        },
+    },
+    particles: {
+        color: {
+            value: "#ffffff",
+        },
+        links: {
+            color: "#ffffff",
+            distance: 150,
+            enable: false,
+            opacity: 0.5,
+            width: 1,
+        },
+        collisions: {
+            enable: true,
+        },
+        move: {
+            direction: "none",
+            enable: true,
+            outMode: "bounce",
+            random: false,
+            speed: 1,
+            straight: false,
+        },
+        number: {
+            density: {
+                enable: true,
+                value_area: 800,
+            },
+            value: 80,
+        },
+        opacity: {
+            value: 0.25,
+        },
+        shape: {
+            type: "circle",
+        },
+        size: {
+            random: true,
+            value: 9,
+        },
+        twinkle: {
+            lines: {
+                enable: true,
+                frequency: 0.005,
+                opacity: 1,
+                color: {
+                    value: "#ffffff"
+                }
+            },
+            particles: {
+                enable: true,
+                frequency: 0.007,
+                opacity: 1,
+                color: {
+                    value: "#ffffff"
+                }
+            }
+        }
+    },
+    detectRetina: true,
+}

@@ -41,15 +41,14 @@
     "react-dom": "^17.0.1",
     "react-google-recaptcha": "^2.1.0",
     "react-intersection-observer": "^8.31.0",
-    "react-particles-js": "^3.4.1",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scroll": "^1.8.1",
     "react-spring": "^8.0.27",
+    "react-tsparticles": "^1.26.4",
     "sass": "^1.32.8",
     "style-loader": "^2.0.0",
-    "url-loader": "^4.1.1",
-    "vanta": "^0.5.21"
+    "url-loader": "^4.1.1"
   },
   "devDependencies": {
     "webpack": "^5.23.0",
