@@ -1,4 +1,5 @@
-const app = require('./server')
+require('newrelic');
+const app = require('./server');
 const port = process.env.PORT || 8080;
 
 
