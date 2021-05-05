@@ -1775,7 +1775,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _IntroTitle__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./IntroTitle */ "./src/components/IntroTitle.js");
 /* harmony import */ var react_tsparticles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-tsparticles */ "./node_modules/react-tsparticles/index.js");
 /* harmony import */ var react_tsparticles__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_tsparticles__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_spring_renderprops__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-spring/renderprops */ "./node_modules/react-spring/renderprops.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Button.js");
+/* harmony import */ var react_scroll__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-scroll */ "./node_modules/react-scroll/modules/index.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -1801,6 +1810,9 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+
+
+
 var Slideshow = /*#__PURE__*/function (_React$Component) {
   _inherits(Slideshow, _React$Component);
 
@@ -1815,13 +1827,106 @@ var Slideshow = /*#__PURE__*/function (_React$Component) {
   _createClass(Slideshow, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      var style = {
+        color: '#87107f',
+        fontWeight: '500',
+        fontFamily: "BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji",
+        lineHeight: '1.2',
+        fontSize: '2.5rem'
+      };
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "sliderDiv"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement((react_tsparticles__WEBPACK_IMPORTED_MODULE_2___default()), {
         id: "tsparticles",
         options: options,
         className: "sliderbg"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_IntroTitle__WEBPACK_IMPORTED_MODULE_1__.default, null));
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "introText",
+        id: "home"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_4__.Spring, {
+        reverse: false,
+        from: {
+          scale: 10,
+          opacity: 0,
+          transform: 'scale(0.9)',
+          freq: '0.0175, 0.0'
+        },
+        to: {
+          scale: 150,
+          opacity: 1,
+          transform: 'scale(1)',
+          freq: '0.0, 0.0'
+        },
+        delay: 100,
+        config: {
+          duration: 3000
+        }
+      }, function (props) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_4__.animated.h1, {
+          style: props
+        }, "Hi."));
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_4__.Spring, {
+        from: {
+          transform: 'translate3d(0,-40px,0)',
+          opacity: 0
+        },
+        to: {
+          transform: 'translate3d(0,0px,0)',
+          opacity: 1
+        },
+        delay: 500,
+        config: {
+          tension: 100,
+          friction: 60
+        }
+      }, function (props) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_4__.animated.h1, {
+          style: props
+        }, "I'm ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_4__.animated.span, {
+          style: _objectSpread(_objectSpread({}, props), style)
+        }, "James Gill.")));
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_4__.Spring, {
+        from: {
+          opacity: 0
+        },
+        to: {
+          opacity: 1
+        },
+        delay: 1200,
+        config: {
+          tension: 140,
+          friction: 300
+        }
+      }, function (props) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_4__.animated.h3, {
+          style: props
+        }, "A software developer on", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " a mission to create and explore."));
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_spring_renderprops__WEBPACK_IMPORTED_MODULE_4__.Spring, {
+        from: {
+          transform: 'translate3d(0,40px,0)',
+          opacity: 0
+        },
+        to: {
+          transform: 'translate3d(0, 0px,0)',
+          opacity: 1
+        },
+        delay: 2500,
+        config: {
+          tension: 100,
+          friction: 60
+        }
+      }, function (props) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_scroll__WEBPACK_IMPORTED_MODULE_3__.Link, {
+          spy: true,
+          smooth: true,
+          offset: -20,
+          duration: 500,
+          to: "portfolio"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default, {
+          style: props,
+          className: "outlineButton"
+        }, "Learn More")));
+      })));
     }
   }]);
 
